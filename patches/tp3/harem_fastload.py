@@ -307,7 +307,7 @@ def _malloc_trim(where: str) -> None:
     whatever the loader's transient host buffers left mapped. The eager
     safetensors strategy reads a whole shard into bytes and deserialises it,
     so ~2.7 GiB of arena stays resident and comes straight out of the KV pool
-    (measured 5 Eyl: KV 4,413,404 -> 4,231,404, -4.1%). malloc_trim costs
+    (measured 5 September: KV 4,413,404 -> 4,231,404, -4.1%). malloc_trim costs
     milliseconds and is numerically inert.
     """
     if os.environ.get("HAREM_MALLOC_TRIM", "1").strip() not in ("1", "true", "yes"):

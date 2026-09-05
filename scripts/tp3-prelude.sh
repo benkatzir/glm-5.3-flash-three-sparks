@@ -55,7 +55,7 @@ run python3 "$TP3_DIR/patch-epfilter-tp3.py" --root "$VLLM_PY"
 # start-tp3.sh sets that (and the mount) from FASTLOAD_MODE in the env file.
 run python3 "$TP3_DIR/patch-fastload-tp3.py" --root "$VLLM_PY"
 
-# --- Optional arms (5 Eyl 2026) ----------------------------------------------
+# --- Optional arms (5 September 2026) ----------------------------------------------
 # Each of the three is applied ONLY when its own env knob is set, so an env file
 # that never asks for one cannot be broken by an anchor that drifted in another
 # image.  Unset knob == upstream behaviour, byte for byte.
