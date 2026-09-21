@@ -1,0 +1,13 @@
+# Distinct local build identity: precompiled wheel from a cgroup-bounded builder.
+# Context produced by build-wheel-bounded.sh, including source and wheelhouse.
+# No compiler runs during this Docker build; no dependency resolution is allowed.
+FROM vllm/vllm-openai@sha256:905c02933be6021301db2dc284e24e3727467aa3a0f63b41d609885778a07bce
+ENV TORCH_CUDA_ARCH_LIST=12.1
+LABEL org.opencontainers.image.revision="754421fc99919317b9a4cf2928797bae8f870040" \
+      com.glm53.build.method="bounded-wheel-6g-maxjobs2-v2"
+COPY source/ /opt/cuda-exl3/
+COPY wheelhouse/ /opt/glm-build/wheelhouse/
+COPY verify-installed-exl3.py /opt/glm-build/verify-installed-exl3.py
+RUN cd /opt/glm-build/wheelhouse && sha256sum -c SHA256SUMS && \
+    python3 -m pip install --no-index --no-deps --force-reinstall ./*.whl && \
+    python3 /opt/glm-build/verify-installed-exl3.py

@@ -1,0 +1,35 @@
+GLM-5.3-Flash on three DGX Sparks: a continuation of NNNtrance's recipe
+
+This repository is a fork of https://github.com/NNNtrance/GLM-5.3-Flash-EXL3-DGX-Spark
+at commit 7f1bd29cf473548212b8b731c52dcf2c7aa5a033 (Apache-2.0). The upstream git
+history, LICENSE, CREDITS.md and LICENSES.md are retained unchanged. Upstream's
+README.md is kept verbatim as UPSTREAM-README.md.
+
+Everything under three-sparks/ and the top-level README.md and NOTICE are
+Copyright (c) 2026 Ben Katzir and are distributed under the same Apache License,
+Version 2.0 (see LICENSE). The private launcher, the authentication middleware,
+the acquisition and evidence tooling, the long-context client and memory guard,
+and the video fixtures and tests were written for this deployment; the runtime
+patch tree under three-sparks/runtime/ is upstream's tracks/tp3 patch set
+flattened into the layout the prelude expects, with its inserted vision hook and
+xgrammar call, and is upstream's work.
+
+Third-party components this recipe builds or downloads (none are redistributed
+here):
+
+- Zeuss5/cuda-exl3 at 754421fc99919317b9a4cf2928797bae8f870040 (MIT), which
+  carries ExLlamaV3 attribution (MIT, (c) 2025 Turboderp). See licenses/.
+- autoscriptlabs/nccl-mesh-plugin at 19924dcc7c571d6e260953724d394ae50bad82cf
+  (MIT) with upstream's patches 0004/0005/0006 applied at build time.
+- vllm/vllm-openai base image at
+  sha256:905c02933be6021301db2dc284e24e3727467aa3a0f63b41d609885778a07bce
+  (vLLM is Apache-2.0; the NVIDIA CUDA, cuDNN and NCCL binaries inside the image
+  are under NVIDIA's own terms).
+- turboderp/GLM-5.3-Flash-exl3 at 2a30229e67012798ba9f0cd832bb78abf4c363d5 (MIT)
+  and zai-org/GLM-5.3-Flash (MIT) for the chat template.
+- incoai/GLM-5.3-Flash-DFlash2 at dc77ff1c99eeb2df044ee3d4f0094eb033fee410
+  (CC BY-NC-ND 4.0): non-commercial, no derivatives. This deployment was a
+  personal, non-commercial evaluation. Do not serve commercially with this draft.
+
+Model weights, the API key, node addresses, raw startup logs and the long-context
+prompt archives are not part of this repository.

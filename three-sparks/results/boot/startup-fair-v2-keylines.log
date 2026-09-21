@@ -1,0 +1,59 @@
+[tp3-prelude] TP3FULL arm rank=0 tp=3 ep=1 fullscope=1
+[tp3-prelude] tp3full constants: vocab padding_size lcm(128,tp), shared expert lcm(128,tp) -> 2304, A9 checkpoint-width fused split
+[tp3-prelude] python3 /opt/harem-tp3/patch-vllm-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-exl3-ep.py --pkg /usr/local/lib/python3.12/dist-packages/cuda_exl3 --overlay /opt/harem-tp3/overlay/cuda_exl3/_harem_ep.py
+[tp3-prelude] python3 /opt/harem-tp3/patch-dflash-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-kvdiag-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-swblock-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-epfilter-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-fastload-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-draftkv-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-tilelang-failloud-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] SM12 items=pdl,kpool HAREM_PDL_SM12=unset
+[tp3-prelude] python3 /opt/harem-tp3/patch-pdl-gate.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-kpool-init.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-indexer-workspace-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-prefixhit-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/patch-kpooltail-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] patch-fullscope-tp3.py sha256 3019a32a4262c2e6
+[tp3-prelude] python3 /opt/harem-tp3/patch-fullscope-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[tp3-prelude] python3 /opt/harem-tp3/check-padload-tp3.py
+[padload] cuda-exl3 padded-load support: padded-output-gate (f3e3090)=yes  vocab-loader-prefix (754421f)=yes  row-parallel-suh-pad (f3e3090)=yes
+[tp3-prelude] python3 /opt/harem-tp3/patch-flashkda-tp3.py --root /usr/local/lib/python3.12/dist-packages --in-place
+[tp3-prelude] python3 /opt/harem-tp3/patch-glm47-failclosed-tp3.py --root /usr/local/lib/python3.12/dist-packages --in-place
+[tp3-prelude] python3 /opt/harem-tp3/patch-xgrammar-backports-tp3.py --root /usr/local/lib/python3.12/dist-packages --in-place
+[tp3-prelude] VISION ARM: patch-vision-tp3.py sha256 7991d0dd7afe12e1
+[tp3-prelude] python3 /opt/harem-tp3/patch-vision-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[vision] anchors 1/1: VS1 VS2 VS3 VS4 VS6 VS7
+[vision] applied: VS1 tower quant_config (EXL3 only), VS2 .attn.{q,k,v}_proj. -> .attn.qkv. stacked map, VS3 dead fused attn.qkv drop + post-load tower audit, VS4 video timestamps from the pixel-path sampler, VS6 frontend placeholder/embedding fail-closed (HTTP 400, not a dead engine), VS7 per-prompt video limit -> HAREM_VISION_VIDEO_LIMIT. Runtime knobs: HAREM_VISION=1, HAREM_VISION_VIDEO_LIMIT (default 2)
+[tp3-prelude] python3 /opt/harem-tp3/check-vision-mapping.py --model /home/ben/glm53-lab/models/target-tp3 --env-mapping {"qkv_proj":["q_proj","k_proj","v_proj"]}
+[vision-map] vision_config.depth=24 -> 99 vLLM prefixes
+[vision-map] checkpoint EXL3 vision modules (headers): 172
+[vision-map] resolve() by packed mapping:
+[vision-map] PASS: union resolves 99/99 vLLM vision prefixes onto all 172 EXL3 vision modules (env supplement {"qkv_proj":["q_proj","k_proj","v_proj"]})
+[tp3-prelude] python3 /opt/harem-tp3/check-vision-names.py --model /home/ben/glm53-lab/models/target-tp3
+[vision-names] 1007 model.visual.* tensors from the headers
+[vision-names] VS3 would drop 48 dead fused tensors (expected 48)
+[vision-names] mapper: 608 remapped, 351 passed through, 595 distinct destinations
+[vision-names] PASS: all 959 live vision tensors map onto the expected parameter and shard; 48 dead fused tensors are dropped by VS3
+[tp3-prelude] VISION: no fixtures under /opt/harem-tp3 -- video geometry gate SKIPPED
+[tp3-prelude] python3 /opt/harem-tp3/flashinfer-warmup.py
+[tp3-prelude] python3 /opt/harem-tp3/preflight-tp3.py --model /home/ben/glm53-lab/models/target-tp3 --tp 3 --ep 1
+RESULT: PASS (8 note(s)) -- arithmetic is sound for tp=3
+[tp3-prelude] patches applied (tp3full arm); starting vllm serve
+(APIServer pid=1) INFO 09-21 01:58:20 [api_utils.py:273] non-default args: {'model_tag': '/home/ben/glm53-lab/models/target-tp3', 'chat_template': '/models/chat_template.jinja', 'default_chat_template_kwargs': {'clear_thinking': True, 'reasoning_effort': 'low'}, 'enable_auto_tool_choice': True, 'tool_call_parser': 'glm47', 'host': '0.0.0.0', 'port': 8888, 'middleware': ['glm_private_auth.BearerMiddleware'], 'disable_fastapi_docs': True, 'model': '/home/ben/glm53-lab/models/target-tp3', 'trust_remote_code': True, 'dtype': 'bfloat16', 'max_model_len': 1000000, 'quantization': 'exl3', 'enforce_eager': True, 'served_model_name': ['glm-5.3-flash'], 'hf_overrides': {'quantization_config_file': '/home/ben/glm53-lab/models/target-tp3/quantization_config.json', 'index_topk': 8192}, 'safetensors_load_strategy': 'eager', 'attention_backend': 'CUSTOM', 'reasoning_parser': 'deepseek_r1', 'distributed_executor_backend': 'mp', 'master_addr': 'HEAD_MGMT_IP', 'master_port': 29531, 'nnodes': 3, 'tensor_parallel_size': 3, 'enable_expert_parallel': True, 'enable_ep_weight_filter': True, 'block_size': 256, 'gpu_memory_utilization': 0.88, 'kv_cache_dtype': 'fp8', 'enable_prefix_caching': True, 'limit_mm_per_prompt': {'image': 4, 'video': 0}, 'mm_processor_kwargs': {'max_pixels': 12544000, 'max_image_tokens': 8000}, 'mm_processor_cache_gb': 0.0, 'mm_encoder_tp_mode': 'data', 'skip_mm_profiling': True, 'max_num_batched_tokens': 2304, 'max_num_seqs': 8, 'long_prefill_token_threshold': 256, 'enable_chunked_prefill': True, 'enable_flashinfer_autotune': False, 'speculative_config': {'method': 'dflash', 'model': '/home/ben/glm53-lab/models/draft-tp3', 'num_speculative_tokens': 7, 'kv_cache_dtype': 'auto'}}
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:19 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:19 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:20 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:20 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:21 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:21 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:22 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:22 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:22 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=2
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:23 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:23 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:24 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=291) INFO 09-21 02:01:24 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(EngineCore pid=254) INFO 09-21 02:01:41 [kv_cache_utils.py:2341] GPU KV cache size: 7,021,917 tokens, Maximum concurrency for 1,000,000 tokens per request: 7.02x
+(APIServer pid=1) INFO:     Application startup complete.

@@ -1,0 +1,7 @@
+patch-kpool-init: applied item 2 to /usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/sparse_attn_indexer_kpool.py (2 sites -> torch.full -1)
+patch-kpool-init: applied item 3 to /usr/local/lib/python3.12/dist-packages/vllm/models/glm5next/nvidia/ops/kpool_compress.py (pid < pool_len bound)
+HAREM-TP3 indexer K-gather workspace bound in /usr/local/lib/python3.12/dist-packages/vllm
+  indexer.py: patched 3 sites (fe1b106466008c21 -> c75a1841c7a74b55)
+  sparse_attn_indexer_kpool.py: patched 2 sites (71a1607705d05025 -> cf4393956d523dad)
+HAREM-TP3 idxws: 2 file(s) changed (set HAREM_INDEXER_WS_MODE=bound to arm)
+Staged overlay: /home/ben/glm53-lab/overlay-v1

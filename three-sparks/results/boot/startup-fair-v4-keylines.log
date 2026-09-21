@@ -1,0 +1,21 @@
+(EngineCore pid=387) INFO 09-21 06:26:56 [kv_cache_utils.py:2341] GPU KV cache size: 5,561,643 tokens, Maximum concurrency for 1,000,000 tokens per request: 5.56x
+[video-geom] 1080p/60s@0.5fps whole-clip: frames=30 canvas=476x868 grid=(15,34,62) tokens=7905 timestamps=15 OK
+[video-geom] 1080p/60s@30fps loader-capped: frames=32 canvas=476x812 grid=(16,34,58) tokens=7888 timestamps=16 OK
+[video-geom] 1080p/8s@8fps whole-clip: frames=16 canvas=672x1148 grid=(8,48,82) tokens=7872 timestamps=8 OK
+[video-geom] blue-rect-down.mp4: frames=32 sampled=8 grid=(4,36,46) rows=1656 timestamps=4 placeholders=1656 tokens=1656 OK
+[video-geom] PASS: 5 video geometries agree (placeholders == encoder rows, brake 8000 tok/item); declared per-prompt video limit = 2
+[video-geom] red-square-right.mp4: frames=32 sampled=8 grid=(4,36,46) rows=1656 timestamps=4 placeholders=1656 tokens=1656 OK
+[vision-names] PASS: all 959 live vision tensors map onto the expected parameter and shard; 48 dead fused tensors are dropped by VS3
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:34 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:34 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:35 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:35 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:35 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=2
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:36 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:36 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:37 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:37 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:37 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=2
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:38 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:38 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=424) INFO 09-21 06:26:39 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0

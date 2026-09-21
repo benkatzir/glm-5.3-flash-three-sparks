@@ -1,0 +1,146 @@
+[tp3-prelude] TP3FULL arm rank=0 tp=3 ep=1 fullscope=1
+[tp3-prelude] tp3full constants: vocab padding_size lcm(128,tp), shared expert lcm(128,tp) -> 2304, A9 checkpoint-width fused split
+[tp3-prelude] python3 /opt/harem-tp3/patch-vllm-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+HAREM-TP3 vLLM patches in /usr/local/lib/python3.12/dist-packages/vllm
+  parameter.py: patched 5 sites (ff6054fbd19ec932 -> 106b43f7f14001c8)
+  weight_utils.py: patched 3 sites (b42ff2bd9301c403 -> a9643a5c52e568b3)
+  vocab_parallel_embedding.py: patched 1 sites (b3e8a07296607153 -> 50869d365f3a2cdc)
+  model.py: patched 4 sites (9936aacdef640288 -> 99890df6b8a7484d)
+HAREM-TP3: 4 file(s) changed
+[tp3-prelude] python3 /opt/harem-tp3/patch-exl3-ep.py --pkg /usr/local/lib/python3.12/dist-packages/cuda_exl3 --overlay /opt/harem-tp3/overlay/cuda_exl3/_harem_ep.py
+HAREM-TP3 cuda-exl3 EP patch in /usr/local/lib/python3.12/dist-packages/cuda_exl3
+  _harem_ep.py: installed (sha c1684747bcacb8b8)
+  moe.py: patched 2 sites (38c5e707364f90d3 -> 8a3231d040e9ef70)
+HAREM-TP3: cuda-exl3 EP patch applied
+[tp3-prelude] python3 /opt/harem-tp3/patch-dflash-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+HAREM-TP3 DFlash2 drafter patches in /usr/local/lib/python3.12/dist-packages/vllm
+  qwen3_dflash2.py: patched 3 sites (eb0f555cc3f77294 -> 30326a6326b00594)
+HAREM-TP3 drafter: 1 file(s) changed
+[tp3-prelude] python3 /opt/harem-tp3/patch-kvdiag-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+HAREM-TP3 KV pool diagnostic in /usr/local/lib/python3.12/dist-packages/vllm
+  kv_cache_utils.py: patched 1 site (11f8f24833e7a6d2 -> c803a3374bfaef9c)
+HAREM-TP3 KV diag: 1 file(s) changed
+[tp3-prelude] python3 /opt/harem-tp3/patch-swblock-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+patch-swblock: applied to /usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/attention/attention.py (HAREM_SW_BLOCK_SIZE honoured)
+[tp3-prelude] python3 /opt/harem-tp3/patch-epfilter-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+patch-epfilter: applied to /usr/local/lib/python3.12/dist-packages/vllm/model_executor/model_loader/ep_weight_filter.py (EXL3 .trellis is now skippable)
+[tp3-prelude] python3 /opt/harem-tp3/patch-fastload-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+patch-fastload: applied to /usr/local/lib/python3.12/dist-packages/vllm/model_executor/model_loader/base_loader.py (HAREM_FASTLOAD_MODE honoured)
+[tp3-prelude] python3 /opt/harem-tp3/patch-draftkv-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+patch-draftkv: applied to /usr/local/lib/python3.12/dist-packages/vllm/config/speculative.py (HAREM_DRAFT_KV_DTYPE honoured)
+[tp3-prelude] python3 /opt/harem-tp3/patch-tilelang-failloud-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+patch-tilelang-failloud: applied to /usr/local/lib/python3.12/dist-packages/vllm/model_executor/kernels/mhc/tilelang_kernels.py (HAREM_TILELANG_FAILLOUD=1 honoured)
+[tp3-prelude] SM12 items=pdl,kpool HAREM_PDL_SM12=unset
+[tp3-prelude] python3 /opt/harem-tp3/patch-pdl-gate.py --root /usr/local/lib/python3.12/dist-packages/vllm
+patch-pdl-gate: applied to /usr/local/lib/python3.12/dist-packages/vllm/platforms/cuda.py
+  is_arch_support_pdl(): sm_12x -> False by default; HAREM_PDL_SM12=1 restores upstream 'major >= 9'
+[tp3-prelude] python3 /opt/harem-tp3/patch-kpool-init.py --root /usr/local/lib/python3.12/dist-packages/vllm
+patch-kpool-init: item 2 already applied (/usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/sparse_attn_indexer_kpool.py)
+patch-kpool-init: applied item 3 to /usr/local/lib/python3.12/dist-packages/vllm/models/glm5next/nvidia/ops/kpool_compress.py (pid < pool_len bound)
+[tp3-prelude] python3 /opt/harem-tp3/patch-indexer-workspace-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+HAREM-TP3 indexer K-gather workspace bound in /usr/local/lib/python3.12/dist-packages/vllm
+  indexer.py: patched 3 sites (fe1b106466008c21 -> c75a1841c7a74b55)
+  sparse_attn_indexer_kpool.py: already patched (sha cf4393956d523dad)
+HAREM-TP3 idxws: 1 file(s) changed (set HAREM_INDEXER_WS_MODE=bound to arm)
+[tp3-prelude] python3 /opt/harem-tp3/patch-prefixhit-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+patch-prefixhit: applied to v1/core/kv_cache_utils.py (HAREM_PREFIX_HIT honoured)
+patch-prefixhit: applied to v1/core/kv_cache_coordinator.py (HAREM_EAGLE_BLOCK_DROP honoured)
+[tp3-prelude] python3 /opt/harem-tp3/patch-kpooltail-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+patch-kpooltail: applied to v1/worker/gpu/model_states/mamba_hybrid.py
+patch-kpooltail: applied to v1/attention/backends/mla/indexer.py
+[tp3-prelude] patch-fullscope-tp3.py sha256 3019a32a4262c2e6
+[tp3-prelude] python3 /opt/harem-tp3/patch-fullscope-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[fullscope] anchors 1/1: A1 A2 A3 A4 A5 A6 A7 A8 A9 A10
+[fullscope] applied: S1 packed_modules_mapping x2 (gate_up_proj, fused_qkv_a_proj, in_proj_qkv; lm_head deliberately absent), S2 quant gates x2 (MLA + KDA), S3 conv1d split + in_proj_qkv/in_proj_bfg_a split + 4 stacked entries, A9 checkpoint-width fused split (TP=3 head pad), A10 post-load pad audit. Runtime knob: HAREM_EXL3_FULLSCOPE=1
+[tp3-prelude] python3 /opt/harem-tp3/check-padload-tp3.py
+[padload] cuda-exl3 padded-load support: padded-output-gate (f3e3090)=yes  vocab-loader-prefix (754421f)=yes  row-parallel-suh-pad (f3e3090)=yes
+[tp3-prelude] python3 /opt/harem-tp3/patch-flashkda-tp3.py --root /usr/local/lib/python3.12/dist-packages --in-place
+patch-flashkda: applied to /usr/local/lib/python3.12/dist-packages/vllm/models/glm5next/nvidia/kda.py (HAREM_KDA_FLASHKDA honoured)
+[tp3-prelude] python3 /opt/harem-tp3/patch-glm47-failclosed-tp3.py --root /usr/local/lib/python3.12/dist-packages --in-place
+patch-glm47-failclosed: applied to /usr/local/lib/python3.12/dist-packages/vllm/parser/glm47_moe.py (HAREM_GLM47_FAILCLOSED honoured, default ON)
+[tp3-prelude] python3 /opt/harem-tp3/patch-xgrammar-backports-tp3.py --root /usr/local/lib/python3.12/dist-packages --in-place
+patch-xgrammar-backports: applied to /usr/local/lib/python3.12/dist-packages/vllm/v1/structured_output/backend_xgrammar.py (vllm#52805/#53046, gate default ON)
+patch-xgrammar-backports: applied to /usr/local/lib/python3.12/dist-packages/vllm/v1/structured_output/__init__.py (vllm#52805/#53046, gate default ON)
+[tp3-prelude] VISION ARM: patch-vision-tp3.py sha256 7991d0dd7afe12e1
+[tp3-prelude] python3 /opt/harem-tp3/patch-vision-tp3.py --root /usr/local/lib/python3.12/dist-packages/vllm
+[vision] anchors 1/1: VS1 VS2 VS3 VS4 VS6 VS7
+[vision] applied: VS1 tower quant_config (EXL3 only), VS2 .attn.{q,k,v}_proj. -> .attn.qkv. stacked map, VS3 dead fused attn.qkv drop + post-load tower audit, VS4 video timestamps from the pixel-path sampler, VS6 frontend placeholder/embedding fail-closed (HTTP 400, not a dead engine), VS7 per-prompt video limit -> HAREM_VISION_VIDEO_LIMIT. Runtime knobs: HAREM_VISION=1, HAREM_VISION_VIDEO_LIMIT (default 2)
+[tp3-prelude] python3 /opt/harem-tp3/check-vision-mapping.py --model /home/ben/glm53-lab/models/target-tp3 --env-mapping {"qkv_proj":["q_proj","k_proj","v_proj"]}
+[vision-map] vision_config.depth=24 -> 99 vLLM prefixes
+[vision-map] checkpoint EXL3 vision modules (headers): 172
+[vision-map] resolve() by packed mapping:
+  upstream Glm4v only          resolved  74/99  checkpoint modules covered 122
+      unresolved (deduped): visual.blocks.N.mlp.gate_up_proj, visual.merger.gate_up_proj
+  full-scope only              resolved  75/99  checkpoint modules covered 100
+      unresolved (deduped): visual.blocks.N.attn.qkv_proj
+  UNION (full-scope + env)     resolved  99/99  checkpoint modules covered 172
+[vision-map] PASS: union resolves 99/99 vLLM vision prefixes onto all 172 EXL3 vision modules (env supplement {"qkv_proj":["q_proj","k_proj","v_proj"]})
+[tp3-prelude] python3 /opt/harem-tp3/check-vision-names.py --model /home/ben/glm53-lab/models/target-tp3
+[vision-names] 1007 model.visual.* tensors from the headers
+[vision-names] VS3 would drop 48 dead fused tensors (expected 48)
+[vision-names] mapper: 608 remapped, 351 passed through, 595 distinct destinations
+[vision-names] PASS: all 959 live vision tensors map onto the expected parameter and shard; 48 dead fused tensors are dropped by VS3
+[tp3-prelude] python3 /opt/harem-tp3/check-video-geometry.py --model /home/ben/glm53-lab/models/target-tp3 --fixtures /opt/harem-tp3/fixtures --max-video-tokens 8000
+[transformers] You are using a model of type `glm5_next` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+[video-geom] blue-rect-down.mp4: frames=32 sampled=8 grid=(4,36,46) rows=1656 timestamps=4 placeholders=1656 tokens=1656 OK
+[video-geom] red-square-right.mp4: frames=32 sampled=8 grid=(4,36,46) rows=1656 timestamps=4 placeholders=1656 tokens=1656 OK
+[video-geom] 1080p/60s@30fps loader-capped: frames=32 canvas=476x812 grid=(16,34,58) tokens=7888 timestamps=16 OK
+[video-geom] 1080p/60s@0.5fps whole-clip: frames=30 canvas=476x868 grid=(15,34,62) tokens=7905 timestamps=15 OK
+[video-geom] 1080p/8s@8fps whole-clip: frames=16 canvas=672x1148 grid=(8,48,82) tokens=7872 timestamps=8 OK
+[video-geom] PASS: 5 video geometries agree (placeholders == encoder rows, brake 8000 tok/item); declared per-prompt video limit = 2
+[tp3-prelude] python3 /opt/harem-tp3/flashinfer-warmup.py
+[flashinfer-warmup] skipped (HAREM_FLASHINFER_WARMUP=0)
+[tp3-prelude] python3 /opt/harem-tp3/preflight-tp3.py --model /home/ben/glm53-lab/models/target-tp3 --tp 3 --ep 1
+GLM-5.3-Flash EXL3 preflight, tp=3, ep=on
+
+== sidecar directory /home/ben/glm53-lab/models/target-tp3
+  PASS  config.json is a real file (the original is untouched)
+  PASS  sidecar marker: source=/home/ben/glm53-lab/models/target
+  PASS  every symlink resolves on this host
+  PASS  quantization_config.json present (cuda-exl3 reads it from _name_or_path)
+  PASS  model.safetensors.index.json present (cuda-exl3 reads it from _name_or_path)
+
+== MLA attention (11 of 45 layers)
+  PASS  num_attention_heads = 66 -> 22 per rank
+  PASS  pad 64 -> 66: rank 2 holds 20/22 real heads (2 zero)
+  PASS  num_key_value_heads = 66 -> 22 per rank
+  PASS  q_b_proj  out 66 x 256 = 16896 -> 5632 per rank
+  PASS  kv_b_proj out 66 x (256+256) = 33792 -> 11264 per rank
+  PASS  o_proj    in  66 x 256 = 16896 -> 5632 per rank (row-parallel)
+  PASS  attention head_size = kv_lora_rank + qk_rope = 512, kv_lora_rank = 512: in cuda-exl3's SUPPORTED_SHAPES
+  note  cuda-exl3's sparse-MLA decode tiles heads 16 at a time with an 'h0+tid < H' guard, so H=22 runs as 22. No kernel-side 22->32 pad (that is a FlashInfer SM120 constraint, not this backend's). Verified H=21/22/23 at 2.6e-3 in 07-mla-tp3-headcount-and-prefill.txt
+  note  DSA indexer index_n_heads=32: wq_b is ReplicatedLinear and wk_weights_proj is disable_tp=True, so it is never sharded -- tp=3 imposes nothing on it
+
+== KDA linear attention (34 of 45 layers)
+  PASS  linear_attn_config.num_heads = 66 -> 22 per rank
+  PASS  KDA projection_size (head_dim 128 x heads 66) = 8448 -> 2816 per rank
+  PASS  q/k/v_conv1d out 8448 -> 2816; dt_bias 8448 -> 2816; A_log 66 -> 22; o_proj in 8448 -> 2816
+  PASS  in_proj_qkvbfg_a shards: q/k/v 8448 each, b 66, f_a/g_a 128 replicated (x3 internally), conv kernel 4
+  note  KDA heads padded 64 -> 66: the extra 2 heads load as zeros (A_log too), so their gated-delta state stays zero
+
+== vocab / embedding / lm_head
+  note  vocab 154880 with the stock padding_size=64 stays 154880, and divide(154880, 3) asserts inside VocabParallelEmbedding
+  PASS  padding_size=lcm(128,3)=384 -> num_embeddings_padded 155136 -> 51712 rows per rank = 404 x 128 (256 zero rows total = 2 whole blocks)
+  note  this is what patch-vllm-tp3.py's vocab_parallel_embedding.py edit does; LogitsProcessor truncates logits back to org_vocab_size, so the pad rows never reach a sampler
+  note  full-scope arm: lm_head is 6-bit EXL3, so this pad lands on an EXL3 output dim. It needs cuda-exl3 >= 754421f: f3e3090 accepts the padded vocab in create_weights (svh allocated zeroed, never written on the pad) and 754421f makes _vocab_loaders fill a prefix instead of copy_ing the unpadded slice into the padded parameter. On 62f53e6/5903248 the boot raises 'EXL3 weights cannot be zero-extended'; on f3e3090 alone it passes that gate and then dies on a copy_ shape mismatch. tp3full's prelude checks for both before any weight is read (check-padload-tp3.py). On a checkpoint with a bf16 lm_head (routed-experts-only) none of this applies.
+
+== dense MLP and shared expert (BF16)
+  PASS  intermediate_size (dense layers) = 12288 -> 4096 per rank
+  PASS  shared expert intermediate 2048 -> pad to 2304 (unit lcm(128,3)=384) -> 768 per rank = 6 x 128, 256 zero columns
+  note  6-bit EXL3 shared expert in the full-scope arm: this pad is on gate_up_proj's OUTPUT and down_proj's INPUT, so both halves have to be whole Hadamard blocks, not merely divisible by tp.
+  note  this is patch-vllm-tp3.py's model.py edit. It is BF16, so a zero pad is a real zero. Do NOT use disable_tp instead: with EP the MoE runner all-reduces the shared output, so a replicated shared expert is counted 3 times and the logits are wrong while the text stays fluent.
+
+== routed experts (EXL3 trellis)
+  PASS  n_routed_experts 288 -> 96 whole experts per rank under --enable-expert-parallel
+  PASS  moe_intermediate_size 2048 / 3 is not an integer -> the trellis CANNOT be tensor-sliced -> --enable-expert-parallel is REQUIRED, not optional
+  PASS  3000 sampled expert trellis tensors all match hidden=4096 intermediate=2048, bits=[4]
+  PASS  per-rank routed weights: 96 experts x 3 projections, trellis 4096x2048 at [4] bit, whole
+
+== routed-expert weights on disk (safetensors headers)
+  PASS  24 sampled expert tensors on disk agree with moe_intermediate_size=2048 and hidden=4096
+
+RESULT: PASS (8 note(s)) -- arithmetic is sound for tp=3
+Reminder: this checks shapes, not kernels. The gates after boot are the correctness probe (10/10) and the code exam (12/12).
+[tp3-prelude] patches applied (tp3full arm); starting vllm serve
+[cpu-gate] PRELUDE_COMPLETE (vllm serve not started)
+[cpu-gate] container exit code 0

@@ -1,0 +1,63 @@
+{
+ "state": "interrupted",
+ "elapsed_seconds": 267.855170563,
+ "requests": [
+  {
+   "index": 0,
+   "state": "canceled_at_deadline_or_interrupt",
+   "submitted_ns": 266250289261595,
+   "finished_ns": 266518034354295,
+   "server_ids": []
+  },
+  {
+   "index": 1,
+   "state": "canceled_at_deadline_or_interrupt",
+   "submitted_ns": 266250300756404,
+   "finished_ns": 266518034843680,
+   "server_ids": []
+  },
+  {
+   "index": 2,
+   "state": "canceled_at_deadline_or_interrupt",
+   "submitted_ns": 266250312135225,
+   "finished_ns": 266518035169958,
+   "server_ids": []
+  },
+  {
+   "index": 3,
+   "state": "canceled_at_deadline_or_interrupt",
+   "submitted_ns": 266250323584705,
+   "finished_ns": 266518035474347,
+   "server_ids": []
+  },
+  {
+   "index": 4,
+   "state": "canceled_at_deadline_or_interrupt",
+   "submitted_ns": 266250334872660,
+   "finished_ns": 266518035758464,
+   "server_ids": []
+  },
+  {
+   "index": 5,
+   "state": "canceled_at_deadline_or_interrupt",
+   "submitted_ns": 266250346347580,
+   "finished_ns": 266518036052229,
+   "server_ids": []
+  },
+  {
+   "index": 6,
+   "state": "canceled_at_deadline_or_interrupt",
+   "submitted_ns": 266250357667504,
+   "finished_ns": 266518036341354,
+   "server_ids": []
+  },
+  {
+   "index": 7,
+   "state": "canceled_at_deadline_or_interrupt",
+   "submitted_ns": 266250369260540,
+   "finished_ns": 266518036621071,
+   "server_ids": []
+  }
+ ],
+ "cleanup_scope": "Canceled HTTP streams are closed; root must confirm server running/waiting counts return to zero after cancellation."
+}

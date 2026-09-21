@@ -1,0 +1,239 @@
+{
+ "url": "http://127.0.0.1:8888",
+ "finished_utc": "2026-09-21T06:35:39Z",
+ "results": [
+  {
+   "http": 200,
+   "answer": "The object is a red rectangle moving from left to right.",
+   "usage": {
+    "prompt_tokens": 1713,
+    "total_tokens": 1797,
+    "completion_tokens": 84,
+    "prompt_tokens_details": null
+   },
+   "seconds": 4.2,
+   "mem_before": {
+    "head": 10.34,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 10.97,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "K4a_one_video_red_square_right",
+   "passed": true
+  },
+  {
+   "http": 200,
+   "answer": "A blue rectangle moves downward.",
+   "usage": {
+    "prompt_tokens": 1713,
+    "total_tokens": 1958,
+    "completion_tokens": 245,
+    "prompt_tokens_details": null
+   },
+   "seconds": 8.8,
+   "mem_before": {
+    "head": 10.97,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 11.11,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "K4a_one_video_blue_rect_down",
+   "passed": true
+  },
+  {
+   "http": 200,
+   "answer": "**Video 1:** A red rectangle moves to the right.\n**Video 2:** A blue rectangle moves downward.\n\n**Differences:** The rectangles differ in color (red vs. blue) and direction of motion (rightward vs. downward). Both are rectangular in shape.",
+   "usage": {
+    "prompt_tokens": 3407,
+    "total_tokens": 3490,
+    "completion_tokens": 83,
+    "prompt_tokens_details": null
+   },
+   "seconds": 9.5,
+   "test": "K4b_two_videos",
+   "passed": true
+  },
+  {
+   "http": 200,
+   "answer": "**Images:**\n1. Red circle\n2. Blue square\n3. Green triangle\n4. Text \"ELEPHANT\"\n\n**Videos:**\n1. A red rectangle with a darker red vertical stripe moves from left to right.\n2. A blue rectangle with a darker blue horizontal stripe moves from top to bottom.",
+   "usage": {
+    "prompt_tokens": 4293,
+    "total_tokens": 4696,
+    "completion_tokens": 403,
+    "prompt_tokens_details": null
+   },
+   "seconds": 8.9,
+   "mem_before": {
+    "head": 11.19,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 11.06,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "K5_four_images_two_videos",
+   "passed": true
+  },
+  {
+   "http": 400,
+   "message": "{\"error\": {\"message\": \"At most 2 video(s) may be provided in one prompt. (parameter=video)\", \"type\": \"BadRequestError\", \"param\": \"video\", \"code\": 400}}",
+   "engine_alive_after": true,
+   "test": "K6_third_video_refused",
+   "passed": true
+  },
+  {
+   "http": 400,
+   "message": "{\"error\": {\"message\": \"Failed to apply Glm5NextProcessor on data={'text': '<|begin_of_video|><|video|><|end_of_video|>', 'videos': [array([[[[197, 200, 197],\\n         [197, 200, 197],\\n         [197, 200, 197],\\n         ...,\\n         [197, 200, 197],\\n         [197, 200, 197],\\n         [197, 200",
+   "engine_alive_after": true,
+   "test": "SHORT_clip_below_sampler_floor",
+   "passed": true
+  },
+  {
+   "http": 200,
+   "answer": "The object is a green circle moving upward.",
+   "usage": {
+    "prompt_tokens": 8017,
+    "total_tokens": 8033,
+    "completion_tokens": 16,
+    "prompt_tokens_details": null
+   },
+   "seconds": 5.5,
+   "mem_before": {
+    "head": 11.13,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 10.5,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "V720p_green_circle_up_8s",
+   "passed": true
+  },
+  {
+   "http": 200,
+   "answer": "The object is a yellow, double-triangle shape that moves from right to left.",
+   "usage": {
+    "prompt_tokens": 8017,
+    "total_tokens": 8102,
+    "completion_tokens": 85,
+    "prompt_tokens_details": null
+   },
+   "seconds": 8.1,
+   "mem_before": {
+    "head": 10.57,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 10.34,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "V1080p_yellow_triangle_left_8s_brake",
+   "passed": true
+  },
+  {
+   "wall_seconds": 25.6,
+   "streams": [
+    {
+     "clip": "red-square-right",
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a red rectangle moving from left to right.",
+     "usage": {
+      "prompt_tokens": 1713,
+      "total_tokens": 1800,
+      "completion_tokens": 87,
+      "prompt_tokens_details": null
+     },
+     "seconds": 19.3
+    },
+    {
+     "clip": "blue-rect-down",
+     "http": 200,
+     "ok": true,
+     "answer": "A blue rectangle moving downward.",
+     "usage": {
+      "prompt_tokens": 1713,
+      "total_tokens": 1902,
+      "completion_tokens": 189,
+      "prompt_tokens_details": null
+     },
+     "seconds": 22.5
+    },
+    {
+     "clip": "green-circle-up",
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a green circle that moves upwards.",
+     "usage": {
+      "prompt_tokens": 8017,
+      "total_tokens": 8421,
+      "completion_tokens": 404,
+      "prompt_tokens_details": null
+     },
+     "seconds": 25.5
+    },
+    {
+     "clip": "yellow-triangle-left",
+     "http": 200,
+     "ok": true,
+     "answer": "A yellow triangle moving from right to left.",
+     "usage": {
+      "prompt_tokens": 8017,
+      "total_tokens": 8223,
+      "completion_tokens": 206,
+      "prompt_tokens_details": null
+     },
+     "seconds": 23.1
+    }
+   ],
+   "mem_before": {
+    "head": 10.37,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 10.34,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "CONC4_four_videos_at_once",
+   "passed": true
+  },
+  {
+   "http": 200,
+   "answer": "The image contains two objects:\n\n1. **Red square** \u2014 located on the left side of the image.\n2. **Blue circle** \u2014 located on the right side of the image.",
+   "usage": {
+    "prompt_tokens": 223,
+    "total_tokens": 263,
+    "completion_tokens": 40,
+    "prompt_tokens_details": null
+   },
+   "test": "IMAGE_after_videos",
+   "passed": true
+  },
+  {
+   "mem": {
+    "head": 10.49,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "ENGINE_alive_final",
+   "passed": true
+  }
+ ],
+ "all_passed": true
+}

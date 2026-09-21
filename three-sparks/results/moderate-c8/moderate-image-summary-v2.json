@@ -1,0 +1,20 @@
+{
+ "schema": "glm53.moderate-image-pair.v1",
+ "image_sha256": "6ebdad08b915b83dd33bf3ecf030ef839c4abfc66df783f1342c1ab84c836753",
+ "image_pixels": [
+  1024,
+  512
+ ],
+ "identical_text_and_chat_settings": true,
+ "actual_prompt_tokens_without_image": 49,
+ "actual_prompt_tokens_with_image": 754,
+ "image_input_prompt_token_increase": 705,
+ "image_input_increase_above256": true,
+ "image_specific_usage_tokens": null,
+ "image_specific_usage_above256": false,
+ "count_scope": "Paired actual prompt usage difference includes the image and its template markers; it is not inferred from image dimensions or total prompt length alone.",
+ "all_completed": true,
+ "all_token_ids_match_usage": true,
+ "elapsed_seconds": 2.563603837,
+ "client_source_sha256": "9aa6e407120ce9baee0b302506c56f16df86e624b5e0c0abe3820ad7b1d60ac8"
+}

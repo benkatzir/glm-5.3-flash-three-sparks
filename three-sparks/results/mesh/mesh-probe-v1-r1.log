@@ -1,0 +1,127 @@
+worker1:1:1 [0] NCCL INFO ncclOsDlopen(libnccl-env.so) failed: libnccl-env.so: cannot open shared object file: No such file or directory
+worker1:1:1 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+worker1:1:1 [0] NCCL INFO cudaDriverVersion 13000
+worker1:1:1 [0] NCCL INFO NCCL_SOCKET_IFNAME set to =MGMT_IFACE
+worker1:1:1 [0] NCCL INFO NCCL version 2.30.7+cuda13.3
+worker1:1:1 [0] NCCL INFO NCCL git version HEAD a5187fa2e
+worker1:1:1 [0] NCCL INFO NCCL_NET_PLUGIN set by environment to mesh
+worker1:1:1 [0] NCCL INFO ncclOsDlopen(mesh) failed: mesh: cannot open shared object file: No such file or directory
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclNetPlugin_v11) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclNetPlugin_v11
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclNetPlugin_v10) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclNetPlugin_v10
+worker1:1:1 [0] NCCL INFO NET/Plugin: Loaded net plugin Mesh (v9)
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclCollNetPlugin_v11) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclCollNetPlugin_v11
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclCollNetPlugin_v10) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclCollNetPlugin_v10
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclCollNetPlugin_v9) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclCollNetPlugin_v9
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclCollNetPlugin_v8) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclCollNetPlugin_v8
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclCollNetPlugin_v7) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclCollNetPlugin_v7
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclCollNetPlugin_v6) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclCollNetPlugin_v6
+worker1:1:1 [0] NCCL INFO Successfully loaded external network plugin /opt/nccl-mesh/libnccl-net-mesh.so
+worker1:1:1 [0] NCCL INFO Initialized NET plugin Mesh
+worker1:1:1 [0] NCCL INFO Assigned NET plugin Mesh to comm
+worker1:1:1 [0] NCCL INFO ncclOsDlopen(libnccl-rma.so) failed: libnccl-rma.so: cannot open shared object file: No such file or directory
+worker1:1:1 [0] NCCL INFO RMA/Plugin: Could not find: libnccl-rma.so
+worker1:1:1 [0] NCCL INFO RMA/Plugin: Failed to load external plugin /opt/nccl-mesh/libnccl-net-mesh.so, dlHandle: (nil), ncclRma: (nil)
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclRmaPlugin_v13) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclRmaPlugin_v13
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclGinPlugin_v13) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclGinPlugin_v13
+worker1:1:1 [0] NCCL INFO RMA/Plugin: Failed to load external plugin /opt/nccl-mesh/libnccl-net-mesh.so, dlHandle: 0x37da3740, ncclRma: (nil)
+worker1:1:1 [0] NCCL INFO transport/net_ib/gin.cc:77 (ncclGinIbInitType) -> 3
+worker1:1:1 [0] NCCL INFO RMA/Plugin: Failed to initialize any plugin
+worker1:1:1 [0] NCCL INFO ncclOsDlopen(libnccl-gin.so) failed: libnccl-gin.so: cannot open shared object file: No such file or directory
+worker1:1:1 [0] NCCL INFO GIN/Plugin: Could not find: libnccl-gin.so
+worker1:1:1 [0] NCCL INFO GIN/Plugin: Failed to load external plugin /opt/nccl-mesh/libnccl-net-mesh.so, dlHandle: (nil), ncclGin: (nil)
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclGinPlugin_v13) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclGinPlugin_v13
+worker1:1:1 [0] NCCL INFO GIN/Plugin: Failed to load external plugin /opt/nccl-mesh/libnccl-net-mesh.so, dlHandle: 0x37da3740, ncclGin: (nil)
+worker1:1:1 [0] NCCL INFO GIN/Plugin: Failed to initialize any GIN plugin
+worker1:1:1 [0] NCCL INFO Using network Mesh
+worker1:1:1 [0] NCCL INFO Loaded NVML from libnvidia-ml.so.1
+worker1:1:1 [0] NCCL INFO [Rank 1] ncclCommInitRankConfig comm 0x352eea50 rank 1 nranks 3 cudaDev 0 nvmlDev 0 busId f01000 commId 0xff9e3d106bac35fd - Init START
+worker1:1:1 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+worker1:1:1 [0] NCCL INFO NET/Mesh : GPU Direct RDMA Enabled for HCA 0 'rocep1s0f0'
+worker1:1:1 [0] NCCL INFO NET/Mesh : GPU Direct RDMA Enabled for HCA 1 'rocep1s0f1'
+worker1:1:1 [0] NCCL INFO NET/Mesh : GPU Direct RDMA Enabled for HCA 2 'roceP2p1s0f0'
+worker1:1:1 [0] NCCL INFO NET/Mesh : GPU Direct RDMA Enabled for HCA 3 'roceP2p1s0f1'
+worker1:1:1 [0] NCCL INFO TOPO/NET : Tried merging multiple devices together and failed. vProps={ndevs=2, devs=[0 1 0 0]}. Set NCCL_NET_MERGE_LEVEL=LOC to disable NIC fusion.
+worker1:1:1 [0] NCCL INFO Marking physical devices as unplaced, increasing distance and restarting search.
+worker1:1:1 [0] NCCL INFO TOPO/NET : Tried merging multiple devices together and failed. vProps={ndevs=2, devs=[2 3 0 0]}. Set NCCL_NET_MERGE_LEVEL=LOC to disable NIC fusion.
+worker1:1:1 [0] NCCL INFO Marking physical devices as unplaced, increasing distance and restarting search.
+worker1:1:1 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is empty, ignoring. (GPU affinity = ).
+worker1:1:1 [0] NCCL INFO Rank 1: 4 Net devices
+worker1:1:1 [0] NCCL INFO Rank 1: 0 CollNet devices
+worker1:1:1 [0] NCCL INFO comm 0x352eea50 rank 1 nRanks 3 nNodes 3 localRanks 1 localRank 0 MNNVL 0
+worker1:1:1 [0] NCCL INFO Trees [0] -1/-1/-1->1->2 [1] -1/-1/-1->1->2 [2] -1/-1/-1->1->2 [3] -1/-1/-1->1->2 [4] -1/-1/-1->1->2 [5] -1/-1/-1->1->2 [6] -1/-1/-1->1->2 [7] -1/-1/-1->1->2
+worker1:1:1 [0] NCCL INFO P2P Chunksize set to 262144
+worker1:1:1 [0] NCCL INFO Tuning P2P operations with maxP2pPeers = 3
+worker1:1:1 [0] NCCL INFO ncclOsDlopen(libnccl-profiler.so) failed: libnccl-profiler.so: cannot open shared object file: No such file or directory
+worker1:1:1 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclProfiler_v6) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclProfiler_v6
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclProfiler_v5) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclProfiler_v5
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclProfiler_v4) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclProfiler_v4
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclProfiler_v3) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclProfiler_v3
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclProfiler_v2) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclProfiler_v2
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclProfiler_v1) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclProfiler_v1
+worker1:1:1 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+worker1:1:76 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 18
+worker1:1:75 [0] NCCL INFO [Proxy Service] Device 0 CPU core 19
+worker1:1:75 [0] NCCL INFO proxy listening socket at WORKER1_MGMT_IP<33225>
+worker1:1:77 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 16
+worker1:1:1 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Mesh/0
+worker1:1:1 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Mesh/1
+worker1:1:1 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[0] [receive] via NET/Mesh/2
+worker1:1:1 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[0] [receive] via NET/Mesh/3
+worker1:1:1 [0] NCCL INFO Channel 04/0 : 0[0] -> 1[0] [receive] via NET/Mesh/0
+worker1:1:1 [0] NCCL INFO Channel 05/0 : 0[0] -> 1[0] [receive] via NET/Mesh/1
+worker1:1:1 [0] NCCL INFO Channel 06/0 : 0[0] -> 1[0] [receive] via NET/Mesh/2
+worker1:1:1 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[0] [receive] via NET/Mesh/3
+worker1:1:1 [0] NCCL INFO Channel 00/0 : 1[0] -> 2[0] [send] via NET/Mesh/0
+worker1:1:1 [0] NCCL INFO Channel 01/0 : 1[0] -> 2[0] [send] via NET/Mesh/1
+worker1:1:1 [0] NCCL INFO Channel 02/0 : 1[0] -> 2[0] [send] via NET/Mesh/2
+worker1:1:1 [0] NCCL INFO Channel 03/0 : 1[0] -> 2[0] [send] via NET/Mesh/3
+worker1:1:1 [0] NCCL INFO Channel 04/0 : 1[0] -> 2[0] [send] via NET/Mesh/0
+worker1:1:1 [0] NCCL INFO Channel 05/0 : 1[0] -> 2[0] [send] via NET/Mesh/1
+worker1:1:1 [0] NCCL INFO Channel 06/0 : 1[0] -> 2[0] [send] via NET/Mesh/2
+worker1:1:1 [0] NCCL INFO Channel 07/0 : 1[0] -> 2[0] [send] via NET/Mesh/3
+worker1:1:1 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+worker1:1:1 [0] NCCL INFO Channel 00/0 : 2[0] -> 1[0] [receive] via NET/Mesh/0
+worker1:1:1 [0] NCCL INFO Channel 01/0 : 2[0] -> 1[0] [receive] via NET/Mesh/1
+worker1:1:1 [0] NCCL INFO Channel 02/0 : 2[0] -> 1[0] [receive] via NET/Mesh/2
+worker1:1:1 [0] NCCL INFO Channel 03/0 : 2[0] -> 1[0] [receive] via NET/Mesh/3
+worker1:1:1 [0] NCCL INFO Channel 04/0 : 2[0] -> 1[0] [receive] via NET/Mesh/0
+worker1:1:1 [0] NCCL INFO Channel 05/0 : 2[0] -> 1[0] [receive] via NET/Mesh/1
+worker1:1:1 [0] NCCL INFO Channel 06/0 : 2[0] -> 1[0] [receive] via NET/Mesh/2
+worker1:1:1 [0] NCCL INFO Channel 07/0 : 2[0] -> 1[0] [receive] via NET/Mesh/3
+worker1:1:1 [0] NCCL INFO Connected all trees
+worker1:1:1 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Mesh/0
+worker1:1:1 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Mesh/1
+worker1:1:1 [0] NCCL INFO Channel 02/0 : 1[0] -> 0[0] [send] via NET/Mesh/2
+worker1:1:1 [0] NCCL INFO Channel 03/0 : 1[0] -> 0[0] [send] via NET/Mesh/3
+worker1:1:1 [0] NCCL INFO Channel 04/0 : 1[0] -> 0[0] [send] via NET/Mesh/0
+worker1:1:1 [0] NCCL INFO Channel 05/0 : 1[0] -> 0[0] [send] via NET/Mesh/1
+worker1:1:1 [0] NCCL INFO Channel 06/0 : 1[0] -> 0[0] [send] via NET/Mesh/2
+worker1:1:1 [0] NCCL INFO Channel 07/0 : 1[0] -> 0[0] [send] via NET/Mesh/3
+worker1:1:1 [0] NCCL INFO Connected binomial trees
+worker1:1:1 [0] NCCL INFO ncclOsDlopen(libnccl-tuner.so) failed: libnccl-tuner.so: cannot open shared object file: No such file or directory
+worker1:1:1 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclTunerPlugin_v5) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclTunerPlugin_v5
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclTunerPlugin_v4) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclTunerPlugin_v4
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclTunerPlugin_v3) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclTunerPlugin_v3
+worker1:1:1 [0] NCCL INFO ncclOsDlsym(ncclTunerPlugin_v2) failed: /opt/nccl-mesh/libnccl-net-mesh.so: undefined symbol: ncclTunerPlugin_v2
+worker1:1:1 [0] NCCL INFO threadThresholds 8/8/64 | 24/8/64 | 512 | 512
+worker1:1:1 [0] NCCL INFO 8 coll channels, 8 collnet channels, 0 nvls channels, 8 p2p channels, 4 p2p channels per peer
+worker1:1:1 [0] NCCL INFO Symmetric memory is not supported. cuMemEnable 0, globalGinSupport 0, cuMemGdrSupport 0
+worker1:1:1 [0] NCCL INFO ncclCommInitRankConfig comm 0x352eea50 rank 1 nranks 3 cudaDev 0 nvmlDev 0 busId f01000 commId 0xff9e3d106bac35fd - Init COMPLETE
+worker1:1:1 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 3 total 1.36 (kernels 0.19, alloc 0.04, bootstrap 0.11, allgathers 0.03, topo 0.01, graphs 0.00, connections 0.99, rest 0.00)
+{"checked_elements": 17, "collective_seconds": 0.015339326986577362, "elements_per_rank": 17, "event": "stage_passed", "full_tensor_check_seconds": 0.02006322899251245, "operation": "all_reduce_sum", "payload_bytes_per_rank": 68, "rank": 1, "repeat": 0, "state": "passed"}
+worker1:1:1 [0] NCCL INFO Symmetric VA size=124GB
+{"checked_elements": 51, "collective_seconds": 0.0009237620106432587, "elements_per_rank": 17, "event": "stage_passed", "full_tensor_check_seconds": 0.0001287380000576377, "operation": "all_gather", "payload_bytes_per_rank": 68, "rank": 1, "repeat": 0, "state": "passed"}
+{"checked_elements": 4096, "collective_seconds": 0.0009704190015327185, "elements_per_rank": 4096, "event": "stage_passed", "full_tensor_check_seconds": 4.475298919714987e-05, "operation": "all_reduce_sum", "payload_bytes_per_rank": 16384, "rank": 1, "repeat": 0, "state": "passed"}
+{"checked_elements": 12288, "collective_seconds": 0.0006528930098284036, "elements_per_rank": 4096, "event": "stage_passed", "full_tensor_check_seconds": 7.608099258504808e-05, "operation": "all_gather", "payload_bytes_per_rank": 16384, "rank": 1, "repeat": 0, "state": "passed"}
+{"checked_elements": 4194304, "collective_seconds": 0.002043257001787424, "elements_per_rank": 4194304, "event": "stage_passed", "full_tensor_check_seconds": 0.0005314659792929888, "operation": "all_reduce_sum", "payload_bytes_per_rank": 16777216, "rank": 1, "repeat": 0, "state": "passed"}
+{"checked_elements": 12582912, "collective_seconds": 0.007093084015650675, "elements_per_rank": 4194304, "event": "stage_passed", "full_tensor_check_seconds": 0.0012290960003156215, "operation": "all_gather", "payload_bytes_per_rank": 16777216, "rank": 1, "repeat": 0, "state": "passed"}
+{"checked_elements": 17, "collective_seconds": 0.0006523639895021915, "elements_per_rank": 17, "event": "stage_passed", "full_tensor_check_seconds": 4.182499833405018e-05, "operation": "all_reduce_sum", "payload_bytes_per_rank": 68, "rank": 1, "repeat": 1, "state": "passed"}
+{"checked_elements": 51, "collective_seconds": 0.00032362298225052655, "elements_per_rank": 17, "event": "stage_passed", "full_tensor_check_seconds": 7.273702067323029e-05, "operation": "all_gather", "payload_bytes_per_rank": 68, "rank": 1, "repeat": 1, "state": "passed"}
+{"checked_elements": 4096, "collective_seconds": 0.0005309869884513319, "elements_per_rank": 4096, "event": "stage_passed", "full_tensor_check_seconds": 3.0800001695752144e-05, "operation": "all_reduce_sum", "payload_bytes_per_rank": 16384, "rank": 1, "repeat": 1, "state": "passed"}
+{"checked_elements": 12288, "collective_seconds": 0.0003992400015704334, "elements_per_rank": 4096, "event": "stage_passed", "full_tensor_check_seconds": 7.219298277050257e-05, "operation": "all_gather", "payload_bytes_per_rank": 16384, "rank": 1, "repeat": 1, "state": "passed"}
+{"checked_elements": 4194304, "collective_seconds": 0.0015011650102678686, "elements_per_rank": 4194304, "event": "stage_passed", "full_tensor_check_seconds": 0.0005544910090975463, "operation": "all_reduce_sum", "payload_bytes_per_rank": 16777216, "rank": 1, "repeat": 1, "state": "passed"}
+{"checked_elements": 12582912, "collective_seconds": 0.003283248981460929, "elements_per_rank": 4194304, "event": "stage_passed", "full_tensor_check_seconds": 0.0011906480067409575, "operation": "all_gather", "payload_bytes_per_rank": 16777216, "rank": 1, "repeat": 1, "state": "passed"}
+worker1:1:1 [0] NCCL INFO Unloading plugin mesh
+{"budget_seconds": 60, "completed_stage_count": 12, "counter_scope": "Host port counters; concurrent fabric traffic can contribute. Inspect transport logs and peer results too.", "cuda_version": "13.0", "distributed_timeout_seconds": 20, "dtype": "float32", "elapsed_seconds": 3.4490486239956226, "init_seconds": 1.4956204610061832, "nccl_version": [2, 29, 7], "operations": ["all_reduce_sum", "all_gather"], "payload_bytes": [68, 16384, 16777216], "plugin_sha256": "8bed82468c9e1f72bbdabd9016922b73c7fd8ea512127d7daadd3dc66209bcb2", "rank": 1, "rdma_counter_deltas": {"roceP2p1s0f0/ports/1/counters/port_rcv_data": 6938, "roceP2p1s0f0/ports/1/counters/port_rcv_errors": 0, "roceP2p1s0f0/ports/1/counters/port_rcv_packets": 375, "roceP2p1s0f0/ports/1/counters/port_xmit_data": 14947892, "roceP2p1s0f0/ports/1/counters/port_xmit_discards": 0, "roceP2p1s0f0/ports/1/counters/port_xmit_packets": 54712, "roceP2p1s0f1/ports/1/counters/port_rcv_data": 14949810, "roceP2p1s0f1/ports/1/counters/port_rcv_errors": 0, "roceP2p1s0f1/ports/1/counters/port_rcv_packets": 54721, "roceP2p1s0f1/ports/1/counters/port_xmit_data": 7326, "roceP2p1s0f1/ports/1/counters/port_xmit_discards": 0, "roceP2p1s0f1/ports/1/counters/port_xmit_packets": 396, "rocep1s0f0/ports/1/counters/port_rcv_data": 7844, "rocep1s0f0/ports/1/counters/port_rcv_errors": 0, "rocep1s0f0/ports/1/counters/port_rcv_packets": 424, "rocep1s0f0/ports/1/counters/port_xmit_data": 14993157, "rocep1s0f0/ports/1/counters/port_xmit_discards": 0, "rocep1s0f0/ports/1/counters/port_xmit_packets": 54899, "rocep1s0f1/ports/1/counters/port_rcv_data": 14995006, "rocep1s0f1/ports/1/counters/port_rcv_errors": 0, "rocep1s0f1/ports/1/counters/port_rcv_packets": 54916, "rocep1s0f1/ports/1/counters/port_xmit_data": 8232, "rocep1s0f1/ports/1/counters/port_xmit_discards": 0, "rocep1s0f1/ports/1/counters/port_xmit_packets": 445}, "rdma_counters_after": {"roceP2p1s0f0/ports/1/counters/port_rcv_data": 30183177768, "roceP2p1s0f0/ports/1/counters/port_rcv_errors": 0, "roceP2p1s0f0/ports/1/counters/port_rcv_packets": 1070085866, "roceP2p1s0f0/ports/1/counters/port_xmit_data": 1740778712121, "roceP2p1s0f0/ports/1/counters/port_xmit_discards": 0, "roceP2p1s0f0/ports/1/counters/port_xmit_packets": 7214049510, "roceP2p1s0f1/ports/1/counters/port_rcv_data": 1744077710840, "roceP2p1s0f1/ports/1/counters/port_rcv_errors": 0, "roceP2p1s0f1/ports/1/counters/port_rcv_packets": 7228888298, "roceP2p1s0f1/ports/1/counters/port_xmit_data": 30222509415, "roceP2p1s0f1/ports/1/counters/port_xmit_discards": 0, "roceP2p1s0f1/ports/1/counters/port_xmit_packets": 1071439355, "rocep1s0f0/ports/1/counters/port_rcv_data": 33333968036, "rocep1s0f0/ports/1/counters/port_rcv_errors": 0, "rocep1s0f0/ports/1/counters/port_rcv_packets": 1183633322, "rocep1s0f0/ports/1/counters/port_xmit_data": 1953438009743, "rocep1s0f0/ports/1/counters/port_xmit_discards": 0, "rocep1s0f0/ports/1/counters/port_xmit_packets": 8071169730, "rocep1s0f1/ports/1/counters/port_rcv_data": 1949025472168, "rocep1s0f1/ports/1/counters/port_rcv_errors": 0, "rocep1s0f1/ports/1/counters/port_rcv_packets": 8054324305, "rocep1s0f1/ports/1/counters/port_xmit_data": 33238379690, "rocep1s0f1/ports/1/counters/port_xmit_discards": 0, "rocep1s0f1/ports/1/counters/port_xmit_packets": 1180583375}, "rdma_counters_before": {"roceP2p1s0f0/ports/1/counters/port_rcv_data": 30183170830, "roceP2p1s0f0/ports/1/counters/port_rcv_errors": 0, "roceP2p1s0f0/ports/1/counters/port_rcv_packets": 1070085491, "roceP2p1s0f0/ports/1/counters/port_xmit_data": 1740763764229, "roceP2p1s0f0/ports/1/counters/port_xmit_discards": 0, "roceP2p1s0f0/ports/1/counters/port_xmit_packets": 7213994798, "roceP2p1s0f1/ports/1/counters/port_rcv_data": 1744062761030, "roceP2p1s0f1/ports/1/counters/port_rcv_errors": 0, "roceP2p1s0f1/ports/1/counters/port_rcv_packets": 7228833577, "roceP2p1s0f1/ports/1/counters/port_xmit_data": 30222502089, "roceP2p1s0f1/ports/1/counters/port_xmit_discards": 0, "roceP2p1s0f1/ports/1/counters/port_xmit_packets": 1071438959, "rocep1s0f0/ports/1/counters/port_rcv_data": 33333960192, "rocep1s0f0/ports/1/counters/port_rcv_errors": 0, "rocep1s0f0/ports/1/counters/port_rcv_packets": 1183632898, "rocep1s0f0/ports/1/counters/port_xmit_data": 1953423016586, "rocep1s0f0/ports/1/counters/port_xmit_discards": 0, "rocep1s0f0/ports/1/counters/port_xmit_packets": 8071114831, "rocep1s0f1/ports/1/counters/port_rcv_data": 1949010477162, "rocep1s0f1/ports/1/counters/port_rcv_errors": 0, "rocep1s0f1/ports/1/counters/port_rcv_packets": 8054269389, "rocep1s0f1/ports/1/counters/port_xmit_data": 33238371458, "rocep1s0f1/ports/1/counters/port_xmit_discards": 0, "rocep1s0f1/ports/1/counters/port_xmit_packets": 1180582930}, "repeats": 2, "required_environment": {"GLOO_SOCKET_IFNAME": "MGMT_IFACE", "MN_IF_NAME": "MGMT_IFACE", "NCCL_ALGO": "Ring", "NCCL_CROSS_NIC": "0", "NCCL_CUMEM_ENABLE": "0", "NCCL_IB_DISABLE": "1", "NCCL_IB_MERGE_NICS": "0", "NCCL_IGNORE_CPU_AFFINITY": "1", "NCCL_MAX_NCHANNELS": "8", "NCCL_MESH_FLUSH": "1", "NCCL_MESH_LINKS_PER_PEER": "0", "NCCL_MESH_MIN_RNR_TIMER": "1", "NCCL_MESH_PTR_CUDA": "1", "NCCL_NET": "Mesh", "NCCL_NET_PLUGIN": "mesh", "NCCL_NVLS_ENABLE": "0", "NCCL_SOCKET_IFNAME": "=MGMT_IFACE", "TP_SOCKET_IFNAME": "MGMT_IFACE"}, "schema": "glm53.mesh-collective-probe.v1", "scope": "One bounded model-free collective-integrity run; not GLM model validation or exhaustive transport qualification.", "sizes_elements": [17, 4096, 4194304], "source_sha256": "680eb89fddd61b7fa5d960d2d476aa75299485fa59c82add6a3480735c5bc6a0", "stages": [{"checked_elements": 17, "collective_seconds": 0.015339326986577362, "elements_per_rank": 17, "full_tensor_check_seconds": 0.02006322899251245, "operation": "all_reduce_sum", "payload_bytes_per_rank": 68, "repeat": 0, "state": "passed"}, {"checked_elements": 51, "collective_seconds": 0.0009237620106432587, "elements_per_rank": 17, "full_tensor_check_seconds": 0.0001287380000576377, "operation": "all_gather", "payload_bytes_per_rank": 68, "repeat": 0, "state": "passed"}, {"checked_elements": 4096, "collective_seconds": 0.0009704190015327185, "elements_per_rank": 4096, "full_tensor_check_seconds": 4.475298919714987e-05, "operation": "all_reduce_sum", "payload_bytes_per_rank": 16384, "repeat": 0, "state": "passed"}, {"checked_elements": 12288, "collective_seconds": 0.0006528930098284036, "elements_per_rank": 4096, "full_tensor_check_seconds": 7.608099258504808e-05, "operation": "all_gather", "payload_bytes_per_rank": 16384, "repeat": 0, "state": "passed"}, {"checked_elements": 4194304, "collective_seconds": 0.002043257001787424, "elements_per_rank": 4194304, "full_tensor_check_seconds": 0.0005314659792929888, "operation": "all_reduce_sum", "payload_bytes_per_rank": 16777216, "repeat": 0, "state": "passed"}, {"checked_elements": 12582912, "collective_seconds": 0.007093084015650675, "elements_per_rank": 4194304, "full_tensor_check_seconds": 0.0012290960003156215, "operation": "all_gather", "payload_bytes_per_rank": 16777216, "repeat": 0, "state": "passed"}, {"checked_elements": 17, "collective_seconds": 0.0006523639895021915, "elements_per_rank": 17, "full_tensor_check_seconds": 4.182499833405018e-05, "operation": "all_reduce_sum", "payload_bytes_per_rank": 68, "repeat": 1, "state": "passed"}, {"checked_elements": 51, "collective_seconds": 0.00032362298225052655, "elements_per_rank": 17, "full_tensor_check_seconds": 7.273702067323029e-05, "operation": "all_gather", "payload_bytes_per_rank": 68, "repeat": 1, "state": "passed"}, {"checked_elements": 4096, "collective_seconds": 0.0005309869884513319, "elements_per_rank": 4096, "full_tensor_check_seconds": 3.0800001695752144e-05, "operation": "all_reduce_sum", "payload_bytes_per_rank": 16384, "repeat": 1, "state": "passed"}, {"checked_elements": 12288, "collective_seconds": 0.0003992400015704334, "elements_per_rank": 4096, "full_tensor_check_seconds": 7.219298277050257e-05, "operation": "all_gather", "payload_bytes_per_rank": 16384, "repeat": 1, "state": "passed"}, {"checked_elements": 4194304, "collective_seconds": 0.0015011650102678686, "elements_per_rank": 4194304, "full_tensor_check_seconds": 0.0005544910090975463, "operation": "all_reduce_sum", "payload_bytes_per_rank": 16777216, "repeat": 1, "state": "passed"}, {"checked_elements": 12582912, "collective_seconds": 0.003283248981460929, "elements_per_rank": 4194304, "full_tensor_check_seconds": 0.0011906480067409575, "operation": "all_gather", "payload_bytes_per_rank": 16777216, "repeat": 1, "state": "passed"}], "state": "passed", "torch_version": "2.13.0+cu130", "world_size": 3}

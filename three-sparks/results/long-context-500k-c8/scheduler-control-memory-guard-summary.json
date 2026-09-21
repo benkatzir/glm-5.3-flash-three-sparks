@@ -1,0 +1,16 @@
+{
+ "schema": "glm53.longvision-memory-guard.v1",
+ "state": "client_exited",
+ "client_name": "glm53-longvision-c8-ctrl",
+ "image_id": "sha256:af1cd7490e0bd7f47c3ede8752e87625f3e080a4f5224d9191ca455aa56cdfbb",
+ "polls": 621,
+ "minimum_mem_available_kib": {
+  "head": 12284656,
+  "worker1": 14561440,
+  "worker2": 14632328
+ },
+ "trigger_reasons": [],
+ "stop_outcome": null,
+ "elapsed_seconds": 3105.253118891036,
+ "scope": "Only the validated CPU client container can be signaled or stopped; model containers are never targets."
+}

@@ -1,0 +1,23 @@
+
+=====================================================
+  NCCL Mesh Plugin - Routing Unit Tests
+=====================================================
+
+TEST: NIC lane classification... PASS
+TEST: Lane name strings... PASS
+TEST: Topology name strings... PASS
+TEST: Node ID generation... PASS
+TEST: Ring direction selection... PASS
+TEST: Ring hop count math... PASS
+TEST: Line position math... PASS
+TEST: Relay session ID generation... PASS
+TEST: Relay header magic... PASS
+TEST: Route entry structure... PASS
+TEST: Ring dual path structure... PASS
+TEST: Line endpoint structure... PASS
+TEST: Constants and limits... PASS
+
+=====================================================
+  Results: 13 tests run, 13 passed, 0 failed
+=====================================================
+

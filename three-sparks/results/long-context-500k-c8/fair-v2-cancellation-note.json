@@ -1,0 +1,20 @@
+{
+ "run": "longvision-c8-v1/runs/fair-v2",
+ "state": "interrupted_by_root_for_memory_margin",
+ "head_available_gib_observed": [
+  1.83,
+  1.88
+ ],
+ "worker_available_gib_observed": {
+  "rank1": 2.79,
+  "rank2": 3.79
+ },
+ "model_or_client_oom_observed": false,
+ "all8_prefill_running": true,
+ "preemptions_observed": 0,
+ "completed_answers": 0,
+ "after_cancel_running": 0,
+ "after_cancel_waiting": 0,
+ "claimed_capacity_failure": false,
+ "next_action": "Reduce gpu_memory_utilization from0.88to0.80; verify actual cache capacity and guarded retry"
+}

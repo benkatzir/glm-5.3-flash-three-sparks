@@ -1,0 +1,7 @@
+  warm-up...
+  C=1  requests=8   total=56.1    per_stream=71.42  TTFT=0.292  accept=59.94%  len=5.2
+  C=2  requests=8   total=73.22   per_stream=43.94  TTFT=0.412  accept=61.11%  len=5.28
+  C=4  requests=16  total=108.39  per_stream=32.68  TTFT=0.604  accept=62.33%  len=5.36
+  C=6  requests=24  total=140.09  per_stream=27.61  TTFT=0.716  accept=63.65%  len=5.46
+  C=8  requests=32  total=155.91  per_stream=24.38  TTFT=0.845  accept=61.9%  len=5.33
+  -> /home/ben/glm53-lab/sweep-v1-round3.json

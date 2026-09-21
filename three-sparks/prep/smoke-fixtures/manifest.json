@@ -1,0 +1,6 @@
+{
+  "file": "shapes.png",
+  "sha256": "a9f5eefd5e3724c08ed3b7e3ab0397bb492d3473f070bea350a0fa70788e6dc8",
+  "question": "Describe the color, shape and left/right position of both objects.",
+  "expected": "left red square; right blue circle"
+}

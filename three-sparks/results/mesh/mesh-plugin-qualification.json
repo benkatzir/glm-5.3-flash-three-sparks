@@ -1,0 +1,20 @@
+{
+ "source": "19924dcc7c571d6e260953724d394ae50bad82cf",
+ "patches": [
+  "0004",
+  "0005",
+  "0006"
+ ],
+ "error_unit": {
+  "pass": 60,
+  "fail": 6,
+  "reason": "obsolete stub enum-name strings; numeric classification passes"
+ },
+ "routing_exit": 0,
+ "sha256": {
+  "libnccl-net.so": "8bed82468c9e1f72bbdabd9016922b73c7fd8ea512127d7daadd3dc66209bcb2",
+  "applied-source.diff": "f43289f317104463a9c5bac7e4d5ac748800a668279650b78e1196b1617aebb8"
+ },
+ "real_gpu_collectives": "pending",
+ "utc": "2026-09-21T01:12:00.110298+00:00"
+}

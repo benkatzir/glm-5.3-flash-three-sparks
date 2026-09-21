@@ -1,0 +1,10 @@
+# LOCAL RECONSTRUCTION, not the unavailable upstream Dockerfile.gb10v8.
+# Build context must be Zeuss5/cuda-exl3 at 754421fc99919317b9a4cf2928797bae8f870040.
+# Derived from its tracked docker/Dockerfile.sparse-mla and NNNtrance docs/02.
+# Not built or GPU-validated yet. Keep its identity distinct from upstream's image.
+FROM vllm/vllm-openai@sha256:905c02933be6021301db2dc284e24e3727467aa3a0f63b41d609885778a07bce
+ENV TORCH_CUDA_ARCH_LIST=12.1
+COPY . /opt/cuda-exl3
+RUN cd /opt/cuda-exl3 && \
+    MAX_JOBS=3 pip install . --no-build-isolation --no-deps && \
+    python3 -c "import cuda_exl3, vllm; import cuda_exl3._C; print(cuda_exl3.__version__, vllm.__version__)"

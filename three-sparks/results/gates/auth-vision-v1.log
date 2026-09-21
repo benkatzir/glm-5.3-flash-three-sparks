@@ -1,0 +1,2 @@
+{"auth_gate": "pass", "model": "glm-5.3-flash", "health": 200}
+{"vision_answer": "- **Left object:** A red square, positioned on the left side of the image.\n- **Right object:** A blue circle, positioned on the right side of the image.", "expected": "left red square; right blue circle", "usage": {"prompt_tokens": 223, "total_tokens": 263, "completion_tokens": 40, "prompt_tokens_details": null}, "finish_reason": "stop"}

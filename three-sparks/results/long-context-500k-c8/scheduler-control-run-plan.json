@@ -1,0 +1,590 @@
+{
+ "prepared_plan": {
+  "schema": "glm53.longvision-c8.plan.v1",
+  "nonce": "f91f2e1cab445d1074425fd88be494db",
+  "concurrency": 8,
+  "model": "glm-5.3-flash",
+  "tokenizer_sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+  "target_revision": "2a30229e67012798ba9f0cd832bb78abf4c363d5",
+  "minimum_actual_prompt_tokens": 500000,
+  "max_output_tokens": 4096,
+  "source_sha256": "69fef15ea35002e08f73a045a494e54669bd75fde0379e7ea94d030cfd8db832",
+  "cases": [
+   {
+    "index": 0,
+    "directory": "case-00",
+    "offline_text_tokens": 500965,
+    "request_sha256": "9523409aa8d18b201f5dd98dbda9dde84d414bd69df333145db0cfccbe62228e",
+    "oracle_sha256": "164e3108568ae946bf037ac936a3d284ab6920007ae9173de9e557e29c4366c8",
+    "image_sha256": "1f7502faaae0285394ce876cd9917a9bec0980d59a8246c51c8199327d8abd14",
+    "prompt_sha256": "97dde97033d5b51cec5510389bf2a8cadbe2fff1ddeeaf286aa5c8c33a78418f",
+    "fact_locations": [
+     {
+      "key": "K8bd51831a7d6",
+      "text_token_offset": 5003,
+      "text_token_fraction": 0.00998672561955426
+     },
+     {
+      "key": "K7bca02c44f31",
+      "text_token_offset": 40076,
+      "text_token_fraction": 0.07999760462307746
+     },
+     {
+      "key": "K163a7f148b9f",
+      "text_token_offset": 85117,
+      "text_token_fraction": 0.1699060812631621
+     },
+     {
+      "key": "K9971a8cdf33d",
+      "text_token_offset": 130235,
+      "text_token_fraction": 0.2599682612557764
+     },
+     {
+      "key": "K7b8d2386b419",
+      "text_token_offset": 175255,
+      "text_token_fraction": 0.34983481879971656
+     },
+     {
+      "key": "K883c9a43c2b6",
+      "text_token_offset": 220363,
+      "text_token_fraction": 0.4398770373179763
+     },
+     {
+      "key": "Ka0ea3da2e4b3",
+      "text_token_offset": 275433,
+      "text_token_fraction": 0.5498048765881848
+     },
+     {
+      "key": "K4d9dd60112d3",
+      "text_token_offset": 320561,
+      "text_token_fraction": 0.6398870180551536
+     },
+     {
+      "key": "Kce929d05d97f",
+      "text_token_offset": 365562,
+      "text_token_fraction": 0.7297156487978202
+     },
+     {
+      "key": "K89116150548b",
+      "text_token_offset": 410483,
+      "text_token_fraction": 0.8193845877456509
+     },
+     {
+      "key": "K7a3623d26a6f",
+      "text_token_offset": 455546,
+      "text_token_fraction": 0.9093369796293154
+     },
+     {
+      "key": "K11be3fb7269b",
+      "text_token_offset": 495524,
+      "text_token_fraction": 0.9891389618037189
+     }
+    ]
+   },
+   {
+    "index": 1,
+    "directory": "case-01",
+    "offline_text_tokens": 500952,
+    "request_sha256": "13209db767c579f7417d691b9762f119e18a7c924c4eb833177ae1a6632ea1e8",
+    "oracle_sha256": "11409fc3d34015b914c22f4454acff06403490d9f2582b5cb1902ab29b3a9a22",
+    "image_sha256": "c5433ff5a5be12dfde44da711a11429563e261c0a7cf185a726526a63b4991b0",
+    "prompt_sha256": "e1078008e58217ea84cc6ccc0bda0c483b83294b07889846cf7c2e4c1c3eb549",
+    "fact_locations": [
+     {
+      "key": "K771bb14b326c",
+      "text_token_offset": 4989,
+      "text_token_fraction": 0.009959037991663871
+     },
+     {
+      "key": "Kd9f403ccbe83",
+      "text_token_offset": 40056,
+      "text_token_fraction": 0.07995975662338907
+     },
+     {
+      "key": "Ka99b2e33d936",
+      "text_token_offset": 85195,
+      "text_token_fraction": 0.17006619396668743
+     },
+     {
+      "key": "K081820815c6d",
+      "text_token_offset": 130139,
+      "text_token_fraction": 0.25978337245883837
+     },
+     {
+      "key": "Kb98f8ccebff8",
+      "text_token_offset": 175242,
+      "text_token_fraction": 0.3498179466296172
+     },
+     {
+      "key": "K6f054b08cc01",
+      "text_token_offset": 220201,
+      "text_token_fraction": 0.439565068110318
+     },
+     {
+      "key": "Kf5305bbf50a4",
+      "text_token_offset": 275282,
+      "text_token_fraction": 0.5495177182644245
+     },
+     {
+      "key": "Kedbeea78a164",
+      "text_token_offset": 320430,
+      "text_token_fraction": 0.6396421214008527
+     },
+     {
+      "key": "K16dbdd63834f",
+      "text_token_offset": 365449,
+      "text_token_fraction": 0.7295090148357527
+     },
+     {
+      "key": "K1630f13e73e5",
+      "text_token_offset": 410456,
+      "text_token_fraction": 0.8193519538798129
+     },
+     {
+      "key": "Kd0f68ec828c0",
+      "text_token_offset": 455498,
+      "text_token_fraction": 0.9092647598971558
+     },
+     {
+      "key": "K7573c51e015a",
+      "text_token_offset": 495547,
+      "text_token_fraction": 0.9892105431258883
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "directory": "case-02",
+    "offline_text_tokens": 500980,
+    "request_sha256": "13cc640e85f749a7d84111b56c5f36f520086cf66d8916cfc03f4cd2e478739f",
+    "oracle_sha256": "add2e3c693be6839260def8238981f6b8f29837373aefda760bb3d7add32a703",
+    "image_sha256": "cb4182bbf3c00aa06b9e9d3aa732eef1092b686babf206038ee35e35e8e8adba",
+    "prompt_sha256": "07da6b5d1fea27839fd5fcf0d647bb64f984f8439a1c775932abc3502b6977cb",
+    "fact_locations": [
+     {
+      "key": "K44134d63db09",
+      "text_token_offset": 5004,
+      "text_token_fraction": 0.009988422691524612
+     },
+     {
+      "key": "K3a9bfbf9214d",
+      "text_token_offset": 40080,
+      "text_token_fraction": 0.08000319374026907
+     },
+     {
+      "key": "K5f7c93e10da1",
+      "text_token_offset": 85108,
+      "text_token_fraction": 0.1698830292626452
+     },
+     {
+      "key": "K32055b557c52",
+      "text_token_offset": 130197,
+      "text_token_fraction": 0.25988462613277974
+     },
+     {
+      "key": "K18f35c2b7651",
+      "text_token_offset": 175273,
+      "text_token_fraction": 0.3498602738632281
+     },
+     {
+      "key": "K28a165dd66e7",
+      "text_token_offset": 220368,
+      "text_token_fraction": 0.4398738472593716
+     },
+     {
+      "key": "K17195ebef113",
+      "text_token_offset": 275508,
+      "text_token_fraction": 0.5499381212822867
+     },
+     {
+      "key": "Kbaff16f7996b",
+      "text_token_offset": 320583,
+      "text_token_fraction": 0.6399117729250668
+     },
+     {
+      "key": "Kf92edb481be2",
+      "text_token_offset": 365637,
+      "text_token_fraction": 0.7298435067268154
+     },
+     {
+      "key": "K4893b11b0077",
+      "text_token_offset": 410661,
+      "text_token_fraction": 0.8197153578985189
+     },
+     {
+      "key": "K6c498cec0b82",
+      "text_token_offset": 455635,
+      "text_token_fraction": 0.9094874046868139
+     },
+     {
+      "key": "K6faaa190a377",
+      "text_token_offset": 495598,
+      "text_token_fraction": 0.989257056169907
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "directory": "case-03",
+    "offline_text_tokens": 500990,
+    "request_sha256": "ffced92087c97ad1b841c029dc8448a8bba023198f34afcae478c427901518f3",
+    "oracle_sha256": "4274c89c2a4cde17f2cb82b56432412f3d876e9c919333830f89a6ab8a8d32f5",
+    "image_sha256": "eb78de8d22d14151104f50e749d7406c42c320fc2dca0523fd812e0410142aba",
+    "prompt_sha256": "9ccc92cff55b5effc591b26a21a388caf0a5b783c3b919b106a9c350e1fbbdf1",
+    "fact_locations": [
+     {
+      "key": "Ke7ffd05aa511",
+      "text_token_offset": 5005,
+      "text_token_fraction": 0.009990219365656002
+     },
+     {
+      "key": "K9829ec82dced",
+      "text_token_offset": 40144,
+      "text_token_fraction": 0.08012934389907982
+     },
+     {
+      "key": "K69b22c2dd186",
+      "text_token_offset": 85286,
+      "text_token_fraction": 0.1702349348290385
+     },
+     {
+      "key": "K7d9e70432ba6",
+      "text_token_offset": 130153,
+      "text_token_fraction": 0.2597916126070381
+     },
+     {
+      "key": "K76c304c04a7a",
+      "text_token_offset": 175287,
+      "text_token_fraction": 0.3498812351543943
+     },
+     {
+      "key": "K7adb061e4d15",
+      "text_token_offset": 220265,
+      "text_token_fraction": 0.4396594742410028
+     },
+     {
+      "key": "Kb00b792cf483",
+      "text_token_offset": 275293,
+      "text_token_fraction": 0.5494979939719355
+     },
+     {
+      "key": "K1f8040db33d3",
+      "text_token_offset": 320332,
+      "text_token_fraction": 0.6393979919758878
+     },
+     {
+      "key": "K264cb90bca8d",
+      "text_token_offset": 365381,
+      "text_token_fraction": 0.729317950458093
+     },
+     {
+      "key": "Kbe06526ada8d",
+      "text_token_offset": 410400,
+      "text_token_fraction": 0.819178027505539
+     },
+     {
+      "key": "K22fbf976fdb3",
+      "text_token_offset": 455483,
+      "text_token_fraction": 0.9091658516138047
+     },
+     {
+      "key": "K4b0d4b54593e",
+      "text_token_offset": 495612,
+      "text_token_fraction": 0.9892652547955049
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "directory": "case-04",
+    "offline_text_tokens": 500952,
+    "request_sha256": "23dd71d9e2068f7a605543d1d9d63c1b4a29d7e71760503f53f297e3c0bd1770",
+    "oracle_sha256": "48740e84e36074a004ba76bf14a913672e4c0666c8d43604c7a72a80484852ef",
+    "image_sha256": "e1865849d5121d5822a4fd60a8587d723d1e334bc7331263989ac257b47fc3cb",
+    "prompt_sha256": "9dad0854c1897dadb8259dc03c99117e3ec1d17ab7a2653514ccf5f4aa729c3d",
+    "fact_locations": [
+     {
+      "key": "Kcc4fc31dc04e",
+      "text_token_offset": 5004,
+      "text_token_fraction": 0.009988980980213674
+     },
+     {
+      "key": "K174502ad5bd6",
+      "text_token_offset": 40007,
+      "text_token_fraction": 0.07986194286079305
+     },
+     {
+      "key": "Kb41444d3c2d3",
+      "text_token_offset": 85108,
+      "text_token_fraction": 0.1698925246330986
+     },
+     {
+      "key": "K72b8647d6d8c",
+      "text_token_offset": 130260,
+      "text_token_fraction": 0.2600249125664734
+     },
+     {
+      "key": "K4770a25839a4",
+      "text_token_offset": 175471,
+      "text_token_fraction": 0.35027507625481086
+     },
+     {
+      "key": "K25607a573d99",
+      "text_token_offset": 220418,
+      "text_token_fraction": 0.43999824334467175
+     },
+     {
+      "key": "K00915ad23957",
+      "text_token_offset": 275445,
+      "text_token_fraction": 0.549843098739999
+     },
+     {
+      "key": "K650f05608c29",
+      "text_token_offset": 320429,
+      "text_token_fraction": 0.6396401252016162
+     },
+     {
+      "key": "K867b9314c9af",
+      "text_token_offset": 365422,
+      "text_token_fraction": 0.729455117456363
+     },
+     {
+      "key": "K48fd00c70abc",
+      "text_token_offset": 410554,
+      "text_token_fraction": 0.8195475814050048
+     },
+     {
+      "key": "K9803b072f05b",
+      "text_token_offset": 455520,
+      "text_token_fraction": 0.9093086762803622
+     },
+     {
+      "key": "K2d2f9b33cdf4",
+      "text_token_offset": 495559,
+      "text_token_fraction": 0.9892344975167281
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "directory": "case-05",
+    "offline_text_tokens": 500951,
+    "request_sha256": "f2f66420d86a9ced630bfa6c1d4e9b9570ff36b303945938a5731e6b3e7edcb9",
+    "oracle_sha256": "e8b7bc98f5316ed8cab008302cf1a390a73f9e34156c42ebb6d8742fbaa00975",
+    "image_sha256": "708547ef900e48e6d19400451923de7761b652a5d1f76e7fc82bababd95b6d05",
+    "prompt_sha256": "dd8a8cbc08ceaa3e6e32ad370d53c10ec9f9ea19d8c117fe3822cb620cbf042d",
+    "fact_locations": [
+     {
+      "key": "Kcb14dce75076",
+      "text_token_offset": 5009,
+      "text_token_fraction": 0.00999898193635705
+     },
+     {
+      "key": "Kc4606f0aefcc",
+      "text_token_offset": 40054,
+      "text_token_fraction": 0.07995592383286988
+     },
+     {
+      "key": "K5c0299dac440",
+      "text_token_offset": 85091,
+      "text_token_fraction": 0.16985892831833851
+     },
+     {
+      "key": "Kf2df6a171858",
+      "text_token_offset": 130266,
+      "text_token_fraction": 0.2600374088483704
+     },
+     {
+      "key": "Kc62c91a6917e",
+      "text_token_offset": 175223,
+      "text_token_fraction": 0.34978071707612124
+     },
+     {
+      "key": "K319ddda1d9bc",
+      "text_token_offset": 220354,
+      "text_token_fraction": 0.4398713646644083
+     },
+     {
+      "key": "K5fa5c5a261a7",
+      "text_token_offset": 275427,
+      "text_token_fraction": 0.5498082646805775
+     },
+     {
+      "key": "K93c232b6e0be",
+      "text_token_offset": 320525,
+      "text_token_fraction": 0.639833037562556
+     },
+     {
+      "key": "Kc034b7a98021",
+      "text_token_offset": 365449,
+      "text_token_fraction": 0.7295104710839982
+     },
+     {
+      "key": "K82b3726a306f",
+      "text_token_offset": 410429,
+      "text_token_fraction": 0.819299691985843
+     },
+     {
+      "key": "Kafadd890fcfe",
+      "text_token_offset": 455472,
+      "text_token_fraction": 0.9092146736906404
+     },
+     {
+      "key": "Kccaabaa89fcf",
+      "text_token_offset": 495550,
+      "text_token_fraction": 0.9892185064008256
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "directory": "case-06",
+    "offline_text_tokens": 500934,
+    "request_sha256": "96ee9e1c0d5f2b70a22257baf17c7d9ab991d444a23ae89047a66cc2e2502732",
+    "oracle_sha256": "3f988704488636d55d798c048a019fcf932a4d1367f6d77f67e687565d08761e",
+    "image_sha256": "eeedd78635a85f191902192919d19964142377121bc80d6088a5d265036e2a68",
+    "prompt_sha256": "ff852cecb490a40dad3067e8ec0a4d79feedc2b546f7a9edf5225d834701fff1",
+    "fact_locations": [
+     {
+      "key": "K5269f6f7a925",
+      "text_token_offset": 4928,
+      "text_token_fraction": 0.009837623319638914
+     },
+     {
+      "key": "Kefaf2d65c2d9",
+      "text_token_offset": 40108,
+      "text_token_fraction": 0.08006643589774301
+     },
+     {
+      "key": "K149e3e5e130a",
+      "text_token_offset": 85021,
+      "text_token_fraction": 0.16972495378632715
+     },
+     {
+      "key": "K7c576b43b88d",
+      "text_token_offset": 130011,
+      "text_token_fraction": 0.2595371845392806
+     },
+     {
+      "key": "Kdd7484f2714d",
+      "text_token_offset": 175096,
+      "text_token_fraction": 0.3495390610339885
+     },
+     {
+      "key": "K98a6dfd1a665",
+      "text_token_offset": 220029,
+      "text_token_fraction": 0.43923750434188935
+     },
+     {
+      "key": "Kf186454ec361",
+      "text_token_offset": 275136,
+      "text_token_fraction": 0.5492460084562039
+     },
+     {
+      "key": "K473532dfb1e9",
+      "text_token_offset": 320174,
+      "text_token_fraction": 0.6391540602155175
+     },
+     {
+      "key": "Ka3abedec1b4d",
+      "text_token_offset": 365349,
+      "text_token_fraction": 0.7293356010971506
+     },
+     {
+      "key": "K1ebede71c981",
+      "text_token_offset": 410373,
+      "text_token_fraction": 0.8192157050629424
+     },
+     {
+      "key": "K181ccbac4e37",
+      "text_token_offset": 455470,
+      "text_token_fraction": 0.9092415368092404
+     },
+     {
+      "key": "K3eb4b690f558",
+      "text_token_offset": 495524,
+      "text_token_fraction": 0.9892001740748282
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "directory": "case-07",
+    "offline_text_tokens": 500962,
+    "request_sha256": "771e8668c48bb9754eef00837313cbea770ed8decb9d931a7d342f2bf3e690ac",
+    "oracle_sha256": "b57b9d3feb8efcf8e8472ee208a718e334cbd4ab06e441ba9a94129fe1879b2b",
+    "image_sha256": "56fe887d3c64178cca03383f83fa8ef2c7bb5c613ef7cf8cfc76acfd7879faf9",
+    "prompt_sha256": "cd5b7bef9e55a2db6366b35835ad37f18418d087999355f4b8144a39a743219b",
+    "fact_locations": [
+     {
+      "key": "Kd395972f7a80",
+      "text_token_offset": 5041,
+      "text_token_fraction": 0.010062639481637329
+     },
+     {
+      "key": "K6734cd721e5f",
+      "text_token_offset": 40071,
+      "text_token_fraction": 0.07998810289003956
+     },
+     {
+      "key": "Kd4f6d9ee1fbb",
+      "text_token_offset": 85072,
+      "text_token_fraction": 0.16981727156950027
+     },
+     {
+      "key": "K29d566c1de0d",
+      "text_token_offset": 130110,
+      "text_token_fraction": 0.2597202981463664
+     },
+     {
+      "key": "K454db66f6f8d",
+      "text_token_offset": 175113,
+      "text_token_fraction": 0.3495534591446058
+     },
+     {
+      "key": "K4e6157a29568",
+      "text_token_offset": 220235,
+      "text_token_fraction": 0.43962416311017605
+     },
+     {
+      "key": "Ka8a40f80f5c5",
+      "text_token_offset": 275310,
+      "text_token_fraction": 0.5495626414777968
+     },
+     {
+      "key": "Kd41ea58e91fb",
+      "text_token_offset": 320315,
+      "text_token_fraction": 0.6393997947948148
+     },
+     {
+      "key": "K585f7dda78e8",
+      "text_token_offset": 365334,
+      "text_token_fraction": 0.7292648943432836
+     },
+     {
+      "key": "Ka0e6b8d87409",
+      "text_token_offset": 410486,
+      "text_token_fraction": 0.8193954830905338
+     },
+     {
+      "key": "K396536227399",
+      "text_token_offset": 455489,
+      "text_token_fraction": 0.9092286440887732
+     },
+     {
+      "key": "K4ca797f570aa",
+      "text_token_offset": 495551,
+      "text_token_fraction": 0.9891987815443087
+     }
+    ]
+   }
+  ],
+  "general_accuracy_claimed": false
+ },
+ "prepared_plan_sha256": "9f85fa0a1f06366db6fecb78ff89cc91c45012b34264461098e4b81cc99b2861",
+ "runtime_evidence_sha256": "beba0c6c21685d1bd893412adb54afe332a2c982eb2aae89d6b53cc5a8eb17c7",
+ "source_sha256": "69fef15ea35002e08f73a045a494e54669bd75fde0379e7ea94d030cfd8db832",
+ "deadline_seconds": 5400,
+ "started_wall_ns": 1789974437644508282,
+ "runtime_evidence_scope": "Root-provided current capacity/config evidence; the client does not independently inspect devices or change scheduler settings."
+}

@@ -1,0 +1,14 @@
+{
+ "rank": 0,
+ "old_running": true,
+ "rollback_tag": "dsv41-rollback:k3-gamma5-20260920-rank0",
+ "new_image": "sha256:af1cd7490e0bd7f47c3ede8752e87625f3e080a4f5224d9191ca455aa56cdfbb",
+ "checkpoint_files": 36,
+ "plugin_sha256": "8bed82468c9e1f72bbdabd9016922b73c7fd8ea512127d7daadd3dc66209bcb2",
+ "overlay": {
+  "sparse_attn_indexer_kpool.py": "cf4393956d523dad3512c4427a837b78ed93fa5f8ffd5388491ecc1cefdaa215",
+  "sparse_attn_indexer.py": "287bd50565de69641717064f0476c6db2169365562053a658911fc8bd45d1006"
+ },
+ "config_sha256": "871e57d97213a9ee70a75274cb2a8bc11e8062dcfe910e27012d4cab80789bf1",
+ "utc": "2026-09-21T01:29:20.247846+00:00"
+}

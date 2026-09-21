@@ -1,0 +1,20 @@
+{
+ "red-square-right.mp4": {
+  "sha256": "bd541cffef7843b68b5f3eba56e53340bed69e3ecf62987d320ad3e215d9f7ee",
+  "bytes": 27221,
+  "description": "red square, 640x480 8fps 32f, moves left->right",
+  "frames": 32,
+  "fps": 8.0,
+  "width": 640,
+  "height": 480
+ },
+ "blue-rect-down.mp4": {
+  "sha256": "a365c079aa5b8d01afbf3c401b8169531b7d5e051fb4536091ca2f99c5ecd724",
+  "bytes": 25970,
+  "description": "blue rectangle, 640x480 8fps 32f, moves top->bottom",
+  "frames": 32,
+  "fps": 8.0,
+  "width": 640,
+  "height": 480
+ }
+}

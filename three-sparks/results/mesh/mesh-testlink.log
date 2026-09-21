@@ -1,0 +1,128 @@
+gcc -Wall -Wextra -O2 -g -I. -iquote ./include -I/usr/include/libnl3  tests/test_routing.c src/mesh_routing.c -o tests/test_routing -lpthread -libverbs
+gcc -Wall -Wextra -O2 -g -I. -iquote ./include -I/usr/include/libnl3  tests/test_error_paths.c -o tests/test_error_paths -lpthread -libverbs
+
+=====================================================
+  NCCL Mesh Plugin - Routing Unit Tests
+=====================================================
+
+TEST: NIC lane classification... PASS
+TEST: Lane name strings... PASS
+TEST: Topology name strings... PASS
+TEST: Node ID generation... PASS
+TEST: Ring direction selection... PASS
+TEST: Ring hop count math... PASS
+TEST: Line position math... PASS
+TEST: Relay session ID generation... PASS
+TEST: Relay header magic... PASS
+TEST: Route entry structure... PASS
+TEST: Ring dual path structure... PASS
+TEST: Line endpoint structure... PASS
+TEST: Constants and limits... PASS
+
+=====================================================
+  Results: 13 tests run, 13 passed, 0 failed
+=====================================================
+
+====================================
+NCCL-001 Error Path Unit Tests
+====================================
+
+Test: mesh_request has start_time field
+  PASS: start_time.tv_sec should be populated after clock_gettime
+  PASS: start_time should be a struct timespec
+
+Test: mesh_send_comm has connection tracking fields
+  PASS: conn_established_time should be populated
+  PASS: peer_ip should be set
+
+Test: mesh_recv_comm has connection tracking fields
+  PASS: conn_established_time should be populated
+  PASS: peer_ip should be set
+
+Test: Configuration defaults
+  PASS: Default op_timeout_sec should be 30
+  PASS: Default connect_timeout_sec should be 10
+  PASS: Default accept_timeout_sec should be 30
+  PASS: Default health_check_interval_ms should be 1000
+  PASS: Default fatal_on_timeout should be 1
+
+Test: Fatal error flag propagation
+  PASS: Fatal error flag should initially be 0
+  PASS: Fatal error flag should be 1 after setting
+
+Test: WC status classification
+  PASS: IBV_WC_RETRY_EXC_ERR should be classified as peer failure
+  PASS: IBV_WC_RNR_RETRY_EXC_ERR should be classified as peer failure
+  PASS: IBV_WC_REM_ABORT_ERR should be classified as peer failure
+  PASS: IBV_WC_REM_ACCESS_ERR should be classified as peer failure
+  PASS: IBV_WC_REM_INV_REQ_ERR should be classified as peer failure
+  PASS: IBV_WC_REM_OP_ERR should be classified as peer failure
+  PASS: IBV_WC_WR_FLUSH_ERR should be classified as peer failure
+  PASS: IBV_WC_SUCCESS should not be a peer failure
+
+Test: Async event type classification
+  PASS: IBV_EVENT_PORT_ERR should be classified as fatal
+  PASS: IBV_EVENT_DEVICE_FATAL should be classified as fatal
+  PASS: IBV_EVENT_QP_FATAL should be classified as fatal
+  PASS: IBV_EVENT_QP_ACCESS_ERR should be classified as fatal
+  PASS: IBV_EVENT_PORT_ACTIVE should NOT be classified as fatal
+  PASS: IBV_EVENT_COMM_EST should NOT be classified as fatal
+  PASS: IBV_EVENT_SQ_DRAINED should NOT be classified as fatal
+  PASS: IBV_EVENT_LID_CHANGE should NOT be classified as fatal
+
+Test: Timeout detection logic
+  PASS: Fresh request should not be timed out
+  PASS: 31-second-old request should be detected as timed out (threshold=30s)
+  PASS: 29-second-old request should NOT be detected as timed out (threshold=30s)
+
+Test: Structured error logging
+  PASS: Log should contain peer IP
+  PASS: Log should contain QP number
+  PASS: Log should contain operation type
+  PASS: Log should contain status string
+  PASS: Log should contain connection age
+
+Test: Connection age calculation
+  PASS: Freshly established connection age should be ~0s
+  PASS: 1-hour-old connection age should be ~3600s
+
+Test: Handle size within NCCL limits
+  PASS: mesh_handle must fit in NCCL_NET_HANDLE_MAXSIZE (128 bytes)
+  INFO: mesh_handle size = 112 bytes (limit = 128)
+
+Test: ibv_event_type_str coverage
+  FAIL: IBV_EVENT_PORT_ERR string (line 418)
+  FAIL: IBV_EVENT_DEVICE_FATAL string (line 420)
+  FAIL: IBV_EVENT_QP_FATAL string (line 422)
+  FAIL: IBV_EVENT_QP_ACCESS_ERR string (line 424)
+  FAIL: IBV_EVENT_PORT_ACTIVE string (line 426)
+  FAIL: Unknown event should return UNKNOWN_EVENT (line 428)
+
+Test: Plugin state has error hardening fields
+  PASS: op_timeout_sec field exists
+  PASS: connect_timeout_sec field exists
+  PASS: accept_timeout_sec field exists
+  PASS: health_check_interval_ms field exists
+  PASS: fatal_on_timeout field exists
+  PASS: plugin_fatal_error atomic field works
+  PASS: fatal_error_msg field exists
+
+Test: Server metrics fields
+  PASS: send_ops should be zero-initialized
+  PASS: recv_ops should be zero-initialized
+  PASS: send_completions should be zero-initialized
+  PASS: recv_completions should be zero-initialized
+  PASS: send_errors should be zero-initialized
+  PASS: recv_errors should be zero-initialized
+  PASS: completion_timeouts should be zero-initialized
+  PASS: max_completion_us should be zero-initialized
+  PASS: total_completion_us should be zero-initialized
+  PASS: active_sends should be zero-initialized
+  PASS: active_recvs should be zero-initialized
+  PASS: metrics_enabled field exists
+  PASS: metrics_interval_sec field exists
+
+====================================
+Results: 60 passed, 6 failed, 66 total
+====================================
+make: *** [Makefile:98: test-unit] Error 1

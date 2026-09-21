@@ -1,0 +1,12 @@
+{
+ "upstream_sha256": "cbca16fef55d9fb7e1c311b9044da4a3bf84595da6964cefcaa70b3ca0057a44",
+ "adapted_sha256": "d741ad15cd11e9aa815560f16e063208b7aa1de21a40f1916d2a7bbc1ff7e2fe",
+ "changes": [
+  "all-route file-key auth and loopback default",
+  "explicit private namespace",
+  "refuse existing containers",
+  "refuse memory-settle timeout",
+  "refuse nonempty dump target",
+  "verify image/overlay identity"
+ ]
+}

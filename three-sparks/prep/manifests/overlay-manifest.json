@@ -1,0 +1,14 @@
+{
+ "vllm_root": "/usr/local/lib/python3.12/dist-packages/vllm",
+ "files": {
+  "sparse_attn_indexer.py": {
+   "original_sha256": "22d1d98bd475b1dc22de85d0e414d0490860de50c8bbd26371175e5ea6411116",
+   "patched_sha256": "287bd50565de69641717064f0476c6db2169365562053a658911fc8bd45d1006"
+  },
+  "sparse_attn_indexer_kpool.py": {
+   "original_sha256": "81bce873b1e0adb4473fda3b6f8a02bade219d91bb2bf440a67d9322505c11e1",
+   "patched_sha256": "cf4393956d523dad3512c4427a837b78ed93fa5f8ffd5388491ecc1cefdaa215"
+  }
+ },
+ "image_id": "sha256:af1cd7490e0bd7f47c3ede8752e87625f3e080a4f5224d9191ca455aa56cdfbb"
+}

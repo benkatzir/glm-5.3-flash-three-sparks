@@ -1,0 +1,521 @@
+{
+ "schema": "glm53.longvision-c8.summary.v1",
+ "requests": [
+  {
+   "index": 0,
+   "state": "canceled_at_deadline_or_interrupt",
+   "usage": {},
+   "finish_reason": null,
+   "actual_prompt_at_least500k": false,
+   "returned_token_ids_match_actual_completion_usage": false,
+   "cached_tokens": null,
+   "image_tokens": null,
+   "ttft_generated_seconds": null,
+   "ttft_content_seconds": null,
+   "e2e_seconds": 267.7450927,
+   "mean_usage_decode_tps": null,
+   "mean_scope": "Actual final completion usage divided by this request's own first-to-last generated-token receipt interval, including its first token. Not common-window throughput.",
+   "grading": {
+    "strict_parse": false,
+    "strict": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    },
+    "diagnostic_unambiguous_embedded_json": false,
+    "diagnostic_distinct_candidate_count": 0,
+    "diagnostic_not_rescored": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    }
+   }
+  },
+  {
+   "index": 1,
+   "state": "canceled_at_deadline_or_interrupt",
+   "usage": {},
+   "finish_reason": null,
+   "actual_prompt_at_least500k": false,
+   "returned_token_ids_match_actual_completion_usage": false,
+   "cached_tokens": null,
+   "image_tokens": null,
+   "ttft_generated_seconds": null,
+   "ttft_content_seconds": null,
+   "e2e_seconds": 267.734087276,
+   "mean_usage_decode_tps": null,
+   "mean_scope": "Actual final completion usage divided by this request's own first-to-last generated-token receipt interval, including its first token. Not common-window throughput.",
+   "grading": {
+    "strict_parse": false,
+    "strict": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    },
+    "diagnostic_unambiguous_embedded_json": false,
+    "diagnostic_distinct_candidate_count": 0,
+    "diagnostic_not_rescored": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    }
+   }
+  },
+  {
+   "index": 2,
+   "state": "canceled_at_deadline_or_interrupt",
+   "usage": {},
+   "finish_reason": null,
+   "actual_prompt_at_least500k": false,
+   "returned_token_ids_match_actual_completion_usage": false,
+   "cached_tokens": null,
+   "image_tokens": null,
+   "ttft_generated_seconds": null,
+   "ttft_content_seconds": null,
+   "e2e_seconds": 267.723034733,
+   "mean_usage_decode_tps": null,
+   "mean_scope": "Actual final completion usage divided by this request's own first-to-last generated-token receipt interval, including its first token. Not common-window throughput.",
+   "grading": {
+    "strict_parse": false,
+    "strict": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    },
+    "diagnostic_unambiguous_embedded_json": false,
+    "diagnostic_distinct_candidate_count": 0,
+    "diagnostic_not_rescored": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    }
+   }
+  },
+  {
+   "index": 3,
+   "state": "canceled_at_deadline_or_interrupt",
+   "usage": {},
+   "finish_reason": null,
+   "actual_prompt_at_least500k": false,
+   "returned_token_ids_match_actual_completion_usage": false,
+   "cached_tokens": null,
+   "image_tokens": null,
+   "ttft_generated_seconds": null,
+   "ttft_content_seconds": null,
+   "e2e_seconds": 267.711889642,
+   "mean_usage_decode_tps": null,
+   "mean_scope": "Actual final completion usage divided by this request's own first-to-last generated-token receipt interval, including its first token. Not common-window throughput.",
+   "grading": {
+    "strict_parse": false,
+    "strict": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    },
+    "diagnostic_unambiguous_embedded_json": false,
+    "diagnostic_distinct_candidate_count": 0,
+    "diagnostic_not_rescored": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    }
+   }
+  },
+  {
+   "index": 4,
+   "state": "canceled_at_deadline_or_interrupt",
+   "usage": {},
+   "finish_reason": null,
+   "actual_prompt_at_least500k": false,
+   "returned_token_ids_match_actual_completion_usage": false,
+   "cached_tokens": null,
+   "image_tokens": null,
+   "ttft_generated_seconds": null,
+   "ttft_content_seconds": null,
+   "e2e_seconds": 267.700885804,
+   "mean_usage_decode_tps": null,
+   "mean_scope": "Actual final completion usage divided by this request's own first-to-last generated-token receipt interval, including its first token. Not common-window throughput.",
+   "grading": {
+    "strict_parse": false,
+    "strict": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    },
+    "diagnostic_unambiguous_embedded_json": false,
+    "diagnostic_distinct_candidate_count": 0,
+    "diagnostic_not_rescored": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    }
+   }
+  },
+  {
+   "index": 5,
+   "state": "canceled_at_deadline_or_interrupt",
+   "usage": {},
+   "finish_reason": null,
+   "actual_prompt_at_least500k": false,
+   "returned_token_ids_match_actual_completion_usage": false,
+   "cached_tokens": null,
+   "image_tokens": null,
+   "ttft_generated_seconds": null,
+   "ttft_content_seconds": null,
+   "e2e_seconds": 267.689704649,
+   "mean_usage_decode_tps": null,
+   "mean_scope": "Actual final completion usage divided by this request's own first-to-last generated-token receipt interval, including its first token. Not common-window throughput.",
+   "grading": {
+    "strict_parse": false,
+    "strict": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    },
+    "diagnostic_unambiguous_embedded_json": false,
+    "diagnostic_distinct_candidate_count": 0,
+    "diagnostic_not_rescored": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    }
+   }
+  },
+  {
+   "index": 6,
+   "state": "canceled_at_deadline_or_interrupt",
+   "usage": {},
+   "finish_reason": null,
+   "actual_prompt_at_least500k": false,
+   "returned_token_ids_match_actual_completion_usage": false,
+   "cached_tokens": null,
+   "image_tokens": null,
+   "ttft_generated_seconds": null,
+   "ttft_content_seconds": null,
+   "e2e_seconds": 267.67867385,
+   "mean_usage_decode_tps": null,
+   "mean_scope": "Actual final completion usage divided by this request's own first-to-last generated-token receipt interval, including its first token. Not common-window throughput.",
+   "grading": {
+    "strict_parse": false,
+    "strict": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    },
+    "diagnostic_unambiguous_embedded_json": false,
+    "diagnostic_distinct_candidate_count": 0,
+    "diagnostic_not_rescored": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    }
+   }
+  },
+  {
+   "index": 7,
+   "state": "canceled_at_deadline_or_interrupt",
+   "usage": {},
+   "finish_reason": null,
+   "actual_prompt_at_least500k": false,
+   "returned_token_ids_match_actual_completion_usage": false,
+   "cached_tokens": null,
+   "image_tokens": null,
+   "ttft_generated_seconds": null,
+   "ttft_content_seconds": null,
+   "e2e_seconds": 267.667360531,
+   "mean_usage_decode_tps": null,
+   "mean_scope": "Actual final completion usage divided by this request's own first-to-last generated-token receipt interval, including its first token. Not common-window throughput.",
+   "grading": {
+    "strict_parse": false,
+    "strict": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    },
+    "diagnostic_unambiguous_embedded_json": false,
+    "diagnostic_distinct_candidate_count": 0,
+    "diagnostic_not_rescored": {
+     "lookup_values_correct": 0,
+     "lookup_value_and_record_correct": 0,
+     "lookups_total": 12,
+     "image_fields_correct": 0,
+     "image_fields_total": 4,
+     "image_all_correct": false,
+     "image_fields_correct_case_whitespace_normalized": 0,
+     "image_all_fields_correct_case_whitespace_normalized": false,
+     "lookup_key_set_exact": false
+    }
+   }
+  }
+ ],
+ "minimum_prompt_tokens": 500000,
+ "general_or_native_relative_accuracy_claimed": false,
+ "speed_count_basis": "Returned token IDs, checked against actual completion usage; not SSE event counts.",
+ "common_window": null,
+ "all8_first_generation_before_any_finish": false,
+ "all8_actual_prompt_usage_at_least500k": false,
+ "all8_completed": false,
+ "all8_exact_token_id_counts": false,
+ "observed8way60second_processed_context_window": false,
+ "concurrency_timeline": [
+  {
+   "start_ns": 266250289261595,
+   "end_ns": 266250300756404,
+   "submitted_unfinished": [
+    0
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266250300756404,
+   "end_ns": 266250312135225,
+   "submitted_unfinished": [
+    0,
+    1
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266250312135225,
+   "end_ns": 266250323584705,
+   "submitted_unfinished": [
+    0,
+    1,
+    2
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266250323584705,
+   "end_ns": 266250334872660,
+   "submitted_unfinished": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266250334872660,
+   "end_ns": 266250346347580,
+   "submitted_unfinished": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266250346347580,
+   "end_ns": 266250357667504,
+   "submitted_unfinished": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266250357667504,
+   "end_ns": 266250369260540,
+   "submitted_unfinished": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266250369260540,
+   "end_ns": 266518034354295,
+   "submitted_unfinished": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266518034354295,
+   "end_ns": 266518034843680,
+   "submitted_unfinished": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266518034843680,
+   "end_ns": 266518035169958,
+   "submitted_unfinished": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266518035169958,
+   "end_ns": 266518035474347,
+   "submitted_unfinished": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266518035474347,
+   "end_ns": 266518035758464,
+   "submitted_unfinished": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266518035758464,
+   "end_ns": 266518036052229,
+   "submitted_unfinished": [
+    5,
+    6,
+    7
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266518036052229,
+   "end_ns": 266518036341354,
+   "submitted_unfinished": [
+    6,
+    7
+   ],
+   "generated_not_finished": []
+  },
+  {
+   "start_ns": 266518036341354,
+   "end_ns": 266518036621071,
+   "submitted_unfinished": [
+    7
+   ],
+   "generated_not_finished": []
+  }
+ ]
+}

@@ -1,0 +1,229 @@
+{
+ "state": "verified",
+ "manifest_sha256": "9d86dd90d73ebf4f5817a6e65afe7ead5dd01f0e93aa584016cd4ec35c60d330",
+ "verification_helper_sha256": "65624a2f56e81f15290543cd7ac457e0e9367c4b867a7a8c0447f666e9634a33",
+ "files": 36,
+ "verified_files": 36,
+ "expected_bytes": 167493730166,
+ "verified_bytes": 167493730166,
+ "started_at": 1789953637.9469926,
+ "finished_at": 1789953939.1213052,
+ "entries": [
+  {
+   "file": "target/.gitattributes",
+   "bytes": 1696,
+   "state": "verified",
+   "sha256": "d3b10d515fb2bb0da69e29ec07a1e44296bd0dc1a51d1388be703a189d470cab"
+  },
+  {
+   "file": "target/LICENSE",
+   "bytes": 1070,
+   "state": "verified",
+   "sha256": "30b85b6b9659f2e78aa259f8faf5d920a68dee7c9ced3fa6dba1f19f2bc4fca1"
+  },
+  {
+   "file": "target/README.md",
+   "bytes": 7238,
+   "state": "verified",
+   "sha256": "4f46db37e6a7cbe3a494d6d7f616a96f4fffe6d1de68be361199a715c8d928fc"
+  },
+  {
+   "file": "target/chat_template.jinja",
+   "bytes": 8617,
+   "state": "verified",
+   "sha256": "41cff9af7b3a86c96751b107a8444f245fbda0bd5320b636a5bb1f7f4ba1a5c3"
+  },
+  {
+   "file": "target/config.json",
+   "bytes": 86509,
+   "state": "verified",
+   "sha256": "df80c17a68120aeae4c1eca8a9aa67866603484f0487cd5458c08dfd3c45156d"
+  },
+  {
+   "file": "target/generation_config.json",
+   "bytes": 194,
+   "state": "verified",
+   "sha256": "230c30609ecbbb9e6583bedde8e7bdda0c6eb8fe5fad0eaeb3d1b293d751cb4f"
+  },
+  {
+   "file": "target/model-00001-of-00019.safetensors",
+   "bytes": 8587818716,
+   "state": "verified",
+   "sha256": "1c7a87b0fb108521d0cf3e495ca63c37732a06744131e8933ca12d2df0d8806e"
+  },
+  {
+   "file": "target/model-00002-of-00019.safetensors",
+   "bytes": 8587936824,
+   "state": "verified",
+   "sha256": "a67cd8e559ac013fc0d1dc58b66bd105e54bee0a31147b295089b2537646d4dc"
+  },
+  {
+   "file": "target/model-00003-of-00019.safetensors",
+   "bytes": 8590375904,
+   "state": "verified",
+   "sha256": "d069cea25c6082a70b2dbc601725687f8d164a5dd047894acb58476b4175c1af"
+  },
+  {
+   "file": "target/model-00004-of-00019.safetensors",
+   "bytes": 8590340084,
+   "state": "verified",
+   "sha256": "d222d3137bec069a165219542d49d02defef2df69763464e93463a176e2ba935"
+  },
+  {
+   "file": "target/model-00005-of-00019.safetensors",
+   "bytes": 8590383216,
+   "state": "verified",
+   "sha256": "6fdd4557f29e1b77248b6bbd6b35c691ef4b1dc63b7305c9f5cb0080e1c82836"
+  },
+  {
+   "file": "target/model-00006-of-00019.safetensors",
+   "bytes": 8587986708,
+   "state": "verified",
+   "sha256": "3e9c1f39a631dedd5cce7614947d1f3eab71c93dbb4c79bd2eec0ab413236055"
+  },
+  {
+   "file": "target/model-00007-of-00019.safetensors",
+   "bytes": 8590342372,
+   "state": "verified",
+   "sha256": "62eca4decce10159107948a320083d8e9dcf60f25e058877a1662b80f1412220"
+  },
+  {
+   "file": "target/model-00008-of-00019.safetensors",
+   "bytes": 8590383800,
+   "state": "verified",
+   "sha256": "e8f8762fa1c6a698fc74d50760b82ec72d6043fb9ef6e05dac4032999f57d7c5"
+  },
+  {
+   "file": "target/model-00009-of-00019.safetensors",
+   "bytes": 8587944528,
+   "state": "verified",
+   "sha256": "f9d2e2df7fc7a65c33514a584e5a228d5eb4bec72fc516d9c649c94b06e3d00e"
+  },
+  {
+   "file": "target/model-00010-of-00019.safetensors",
+   "bytes": 8590383896,
+   "state": "verified",
+   "sha256": "5eb19bda8461e44323898172492f9f5c948f5c8ad00816b0e004feaf8b11ccfa"
+  },
+  {
+   "file": "target/model-00011-of-00019.safetensors",
+   "bytes": 8590342356,
+   "state": "verified",
+   "sha256": "f2e687a3d410af6bd48f90d5770fac1054ad5c337d3cfa2bd56a5600387ba36a"
+  },
+  {
+   "file": "target/model-00012-of-00019.safetensors",
+   "bytes": 8590383392,
+   "state": "verified",
+   "sha256": "caee2cdd11e781195a3bbb70b53da0c08c4add3485e200a4a28119d238201523"
+  },
+  {
+   "file": "target/model-00013-of-00019.safetensors",
+   "bytes": 8587986540,
+   "state": "verified",
+   "sha256": "094d5b9341505d25852993e0eef6d137ba75c4179bec2204bd067af264da5dd1"
+  },
+  {
+   "file": "target/model-00014-of-00019.safetensors",
+   "bytes": 8590342372,
+   "state": "verified",
+   "sha256": "765f21794314da81bccdf6a1c9b3fff3f86711d34d83f7551667455a9775dc1a"
+  },
+  {
+   "file": "target/model-00015-of-00019.safetensors",
+   "bytes": 8590383888,
+   "state": "verified",
+   "sha256": "f08d208c8ad27b3bb9c75c42c90e33a3e8acd722ccf5f4f74df1638084d46067"
+  },
+  {
+   "file": "target/model-00016-of-00019.safetensors",
+   "bytes": 8590341500,
+   "state": "verified",
+   "sha256": "e4c0bbf93639fd96eddb9a38505c4de99d650f82d376c0e303a7c3fd38544c3d"
+  },
+  {
+   "file": "target/model-00017-of-00019.safetensors",
+   "bytes": 8587986956,
+   "state": "verified",
+   "sha256": "8e954f3e1660889a50974f46e66ad75a4e3bcadb0398a91646d58a09d9c2f54c"
+  },
+  {
+   "file": "target/model-00018-of-00019.safetensors",
+   "bytes": 8590342372,
+   "state": "verified",
+   "sha256": "bad6f1e51e7bd25a4da4fe55efe4f91512bf4e82085db2baa5cce1adea027c58"
+  },
+  {
+   "file": "target/model-00019-of-00019.safetensors",
+   "bytes": 6661824340,
+   "state": "verified",
+   "sha256": "de2031315b49f89e3d091e92bead8b239ea46e304236f34b5734a68b0b07d547"
+  },
+  {
+   "file": "target/model.safetensors.index.json",
+   "bytes": 15963650,
+   "state": "verified",
+   "sha256": "ee1f2dbea800dea0b4225c38193f7ef41180ed42dd51f80a0cee58daf44cf606"
+  },
+  {
+   "file": "target/mtp.safetensors",
+   "bytes": 3793519833,
+   "state": "verified",
+   "sha256": "1bd09bd4eff4adc568e4ac3e92efb436c2d3aa5f0dceab4c72005d796066822d"
+  },
+  {
+   "file": "target/processor_config.json",
+   "bytes": 909,
+   "state": "verified",
+   "sha256": "aae38374c94b08cc9b0547c6e64f05b951bd9735cea571c6988f5ed552bed3ed"
+  },
+  {
+   "file": "target/quantization_config.json",
+   "bytes": 47905678,
+   "state": "verified",
+   "sha256": "d18c35bf6184a67a3b612b15c216bdfdf9e81505c0e02b646152925b13fafef3"
+  },
+  {
+   "file": "target/tokenizer.json",
+   "bytes": 20217442,
+   "state": "verified",
+   "sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d"
+  },
+  {
+   "file": "target/tokenizer_config.json",
+   "bytes": 761,
+   "state": "verified",
+   "sha256": "98b1271574f41abf89427ae2dda030d94dc9478f0edc5a8bd240db213c6fd5fc"
+  },
+  {
+   "file": "draft/.gitattributes",
+   "bytes": 116,
+   "state": "verified",
+   "sha256": "70e0ed421d653865ad7ace84728e32ded01ec0a860e989a5ed736fe11b42214f"
+  },
+  {
+   "file": "draft/README.md",
+   "bytes": 4666,
+   "state": "verified",
+   "sha256": "088bc4561a839840004fe2c02d01fd2da85079b90e76998e884f6cd9784ffd9c"
+  },
+  {
+   "file": "draft/config.json",
+   "bytes": 1273,
+   "state": "verified",
+   "sha256": "c4aeac0101196a6e26705b34c45230bcd0c7c68ee2d2d1efdb242087f3712573"
+  },
+  {
+   "file": "draft/model.safetensors",
+   "bytes": 2342169800,
+   "state": "verified",
+   "sha256": "b33c03475ba7322cf398828f2d8d1be376df30dc05c6b40c28c8ea8da23e410b"
+  },
+  {
+   "file": "template/chat_template.jinja",
+   "bytes": 10950,
+   "state": "verified",
+   "sha256": "0c4099f3382d6c92700dfb99725025360966fd73032f0ecf32377c0d9e6309c5"
+  }
+ ]
+}

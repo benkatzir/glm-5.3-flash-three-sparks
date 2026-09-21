@@ -1,0 +1,22 @@
+{
+  "recipe": "7f1bd29cf473548212b8b731c52dcf2c7aa5a033",
+  "cuda_exl3": "754421fc99919317b9a4cf2928797bae8f870040",
+  "base_image": "vllm/vllm-openai@sha256:905c02933be6021301db2dc284e24e3727467aa3a0f63b41d609885778a07bce",
+  "target": {
+    "repo": "turboderp/GLM-5.3-Flash-exl3",
+    "revision": "2a30229e67012798ba9f0cd832bb78abf4c363d5"
+  },
+  "draft": {
+    "repo": "incoai/GLM-5.3-Flash-DFlash2",
+    "revision": "dc77ff1c99eeb2df044ee3d4f0094eb033fee410"
+  },
+  "template": {
+    "repo": "zai-org/GLM-5.3-Flash",
+    "revision": "690b705278a3a58e538fcb37c2ca8b5f9511213c",
+    "file": "chat_template.jinja",
+    "sha256": "0c4099f3382d6c92700dfb99725025360966fd73032f0ecf32377c0d9e6309c5"
+  },
+  "mesh_plugin_short_revision": "19924dcc",
+  "runtime_status": "not deployed",
+  "mesh_plugin_revision": "19924dcc7c571d6e260953724d394ae50bad82cf"
+}

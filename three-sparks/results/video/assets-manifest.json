@@ -1,0 +1,67 @@
+{
+ "fixtures/red-square-right.mp4": {
+  "sha256": "bd541cffef7843b68b5f3eba56e53340bed69e3ecf62987d320ad3e215d9f7ee",
+  "bytes": 27221,
+  "description": "red square, 640x480 8fps 32f, moves left->right",
+  "frames": 32,
+  "fps": 8.0,
+  "width": 640,
+  "height": 480
+ },
+ "fixtures/blue-rect-down.mp4": {
+  "sha256": "a365c079aa5b8d01afbf3c401b8169531b7d5e051fb4536091ca2f99c5ecd724",
+  "bytes": 25970,
+  "description": "blue rectangle, 640x480 8fps 32f, moves top->bottom",
+  "frames": 32,
+  "fps": 8.0,
+  "width": 640,
+  "height": 480
+ },
+ "tests/green-circle-up-720p.mp4": {
+  "sha256": "825ff8167efd67d043aa7ec2dea9d4a7268fa22eb5fcf469a5a246ccf4877519",
+  "bytes": 123407,
+  "description": "green circle, 1280x720 8fps 64f (8 s), moves bottom->top",
+  "frames": 64,
+  "fps": 8.0,
+  "width": 1280,
+  "height": 720
+ },
+ "tests/yellow-triangle-left-1080p.mp4": {
+  "sha256": "0fda27f8a8b0b53220570cad4463b8764bcea29fe7551f9596b9772f08e90c6b",
+  "bytes": 254757,
+  "description": "yellow triangle, 1920x1080 8fps 64f (8 s), moves right->left",
+  "frames": 64,
+  "fps": 8.0,
+  "width": 1920,
+  "height": 1080
+ },
+ "tests/short-2frame-0.25s.mp4": {
+  "sha256": "e6a07102581aaa6c52c5647b629ef7fd14736ecb356e81826a28cd8330d03032",
+  "bytes": 8334,
+  "description": "2 frames at 8 fps = 0.25 s; below the sampler floor, must be HTTP 400 not a dead engine",
+  "frames": 2,
+  "fps": 8.0,
+  "width": 640,
+  "height": 480
+ },
+ "tests/red-circle.png": {
+  "sha256": "ab777d3dd264bf36ac42bc0d525b4ac979241b93941052b23ca3201d8eef677c",
+  "bytes": 2949,
+  "description": "red-circle"
+ },
+ "tests/blue-square.png": {
+  "sha256": "fa3f6dea36fbda17c072c25ad9798cd396219863d808330e5fbfd9ac972a558c",
+  "bytes": 2854,
+  "description": "blue-square"
+ },
+ "tests/green-triangle.png": {
+  "sha256": "08d7484b6116cc346291ed16e3b01c6b3ee68cefa17a784ccafb231f139c6370",
+  "bytes": 3103,
+  "description": "green-triangle"
+ },
+ "tests/elephant-text.png": {
+  "sha256": "de38f6b6d5ab569d70c830fe032e7b43f15b7c1e865daab303492e8c4f16580a",
+  "bytes": 11927,
+  "description": "the word ELEPHANT"
+ }
+}

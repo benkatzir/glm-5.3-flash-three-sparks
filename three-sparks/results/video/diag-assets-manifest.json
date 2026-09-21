@@ -1,0 +1,37 @@
+{
+ "green-circle-up-480p-4s.mp4": {
+  "sha256": "a08dd9788c831028fbffb4be85266a9a6e8b891aa366d4bbe49b38a349612dc6",
+  "w": 640,
+  "h": 480,
+  "fps": 8,
+  "frames": 32
+ },
+ "green-circle-up-720p-4s.mp4": {
+  "sha256": "1e957de80bd00e78f443335a346d3bc9f29f96a782db28d38c5213e2a2aae22c",
+  "w": 1280,
+  "h": 720,
+  "fps": 8,
+  "frames": 32
+ },
+ "green-circle-up-720p-8s-4fps.mp4": {
+  "sha256": "eecef4d5b47061f7ee8f18594e95f4f806595b8a72cab4a96fbdb5a6e9f50271",
+  "w": 1280,
+  "h": 720,
+  "fps": 4,
+  "frames": 32
+ },
+ "green-circle-down-720p-8s.mp4": {
+  "sha256": "cc9639b2e71a4a7a708ee0cdd2355282af3b727115d7189a25994b76119441d6",
+  "w": 1280,
+  "h": 720,
+  "fps": 8,
+  "frames": 64
+ },
+ "red-square-right-720p-8s.mp4": {
+  "sha256": "d38e3e6d1c1bec1422ee12dea180136517742d572ccb96e210558315b480b8b6",
+  "w": 1280,
+  "h": 720,
+  "fps": 8,
+  "frames": 64
+ }
+}

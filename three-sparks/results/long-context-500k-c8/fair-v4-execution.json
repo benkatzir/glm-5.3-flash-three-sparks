@@ -1,0 +1,79 @@
+{
+ "state": "completed",
+ "elapsed_seconds": 3091.229324055,
+ "requests": [
+  {
+   "index": 0,
+   "state": "completed",
+   "submitted_ns": 287949694568717,
+   "finished_ns": 291005597960249,
+   "server_ids": [
+    "chatcmpl-9b2df3712b4e043f"
+   ]
+  },
+  {
+   "index": 1,
+   "state": "completed",
+   "submitted_ns": 287949706020425,
+   "finished_ns": 290991948255496,
+   "server_ids": [
+    "chatcmpl-8bbc13c0f33bfac8"
+   ]
+  },
+  {
+   "index": 2,
+   "state": "completed",
+   "submitted_ns": 287949717288613,
+   "finished_ns": 291002623570899,
+   "server_ids": [
+    "chatcmpl-a07525c714f23831"
+   ]
+  },
+  {
+   "index": 3,
+   "state": "completed",
+   "submitted_ns": 287949728691584,
+   "finished_ns": 291020444860564,
+   "server_ids": [
+    "chatcmpl-85dfabd06397ddf4"
+   ]
+  },
+  {
+   "index": 4,
+   "state": "completed",
+   "submitted_ns": 287949739894781,
+   "finished_ns": 291011109450628,
+   "server_ids": [
+    "chatcmpl-a8bc912e9824bc2b"
+   ]
+  },
+  {
+   "index": 5,
+   "state": "completed",
+   "submitted_ns": 287949751265129,
+   "finished_ns": 291018490438249,
+   "server_ids": [
+    "chatcmpl-a92578630154b47d"
+   ]
+  },
+  {
+   "index": 6,
+   "state": "completed",
+   "submitted_ns": 287949762726196,
+   "finished_ns": 291033265757262,
+   "server_ids": [
+    "chatcmpl-b02c311676591e40"
+   ]
+  },
+  {
+   "index": 7,
+   "state": "completed",
+   "submitted_ns": 287949774343534,
+   "finished_ns": 291040810784785,
+   "server_ids": [
+    "chatcmpl-bc7ceac874604b47"
+   ]
+  }
+ ],
+ "cleanup_scope": "Canceled HTTP streams are closed; root must confirm server running/waiting counts return to zero after cancellation."
+}

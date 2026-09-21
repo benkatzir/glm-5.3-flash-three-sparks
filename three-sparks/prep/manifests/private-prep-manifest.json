@@ -1,0 +1,45 @@
+{
+ "status": "source frozen; runtime not deployed by this subagent",
+ "files": {
+  "source-pins.json": "acaccc787dbacfb0adba921324693c696ffaaf9191d353f6d7fe4bde4803f34e",
+  "download-manifest.json": "9d86dd90d73ebf4f5817a6e65afe7ead5dd01f0e93aa584016cd4ec35c60d330",
+  "download-models.py": "65624a2f56e81f15290543cd7ac457e0e9367c4b867a7a8c0447f666e9634a33",
+  "Dockerfile.serve-reconstructed": "9e86b4fc93d25d54da56fc2103affda13eaf2b4603a4ac4842c6bab6190acd2f",
+  "prepare-local-tree.py": "38c2c24542559d978235a3ea441e595bc4b8dae368eae25fa98efdb6fa458ecf",
+  "prepared-runtime-manifest.json": "fa72c4823f15b032d9ea6abe78bb021665df9e47c2705c93d9e5077c52649704",
+  "prepare-private-launch.py": "cec249ff1f8c5874d4eb5980f30edf14408e8761c3ed3e902cc4d0c5920236fd",
+  "start-private-tp3.sh": "d741ad15cd11e9aa815560f16e063208b7aa1de21a40f1916d2a7bbc1ff7e2fe",
+  "private-launch-manifest.json": "f01cb7781a77b2629d5aea95c066d5b6d359fb0ea6f0e4d02c98fd9f3e9dd7b4",
+  "private-entry.sh": "65e8ce34ab870e6466ae368059a3ba9ab830083799c45cb45381edc6029cd58b",
+  "glm_private_auth.py": "8100f3466dd7abf7a43d5ce2e506e76a347d61b798dec9d4090f152c23aa196f",
+  "stage-indexer.py": "486b307594e5f7b925a6637038935e47d9706698327a9322e646fdb6a9517a96",
+  "verify-overlay.py": "0640915fe99980b85575af8891053c847f7ce11c86e8d210a6ed4d786eaf9880",
+  "make-node-env.py": "7aa8743ac325b61a430b2b64b64345fdc44d9d35c7439fa6fb5207f7f99a7e42",
+  "test-private-auth.py": "ac8b7dc9f24b19bb2b4c3b7ee8493942f51c77ca617613a66d472ad9cd9773df",
+  "make-vision-fixture.py": "22a282e1a666e92b8a4c4c889d49e51c353b0aa5afd24649bb5a55c5c7ebead5",
+  "probe-private-api.py": "7c1e8f65238dcd0273b7ba9cca5768e38e74cae713a0f3892efebed2c6e1e5b8",
+  "prepare-private-benchmark.py": "f3af048f8bef4bebfa1d968460a807bf69c587b1a308f3bc622a965adfaceb39",
+  "bench-private.py": "134aa21d07bbdc90d60d12598a62ffbb941b939bc796c46287feaeff7fbfe15e",
+  "correctness-private.py": "e5a5a18828d8a727adaa30edd1d0b4f399204700143b895653d7cd41de5b7373",
+  "hizset-v2.jsonl": "af1a16d22a81b54dff1908ef22a72f30c04170bb27ba6c2638915548ce094c49",
+  "build-mesh.sh": "7b3debb31a4802ccf6232f117507751b8555e8cd5bc1ab5bdbdae66c51b936ca",
+  "private-handoff.md": "ac0fee6d537cbf55ce497be9cc6799d3a1ca5d1a21286758baa0bad4cec39b96",
+  "deploy-preparation.md": "3abf890e0559b1de458d98a35753a330db133b7332955423ac4fa48837c0ecc5",
+  "smoke-fixtures/shapes.png": "a9f5eefd5e3724c08ed3b7e3ab0397bb492d3473f070bea350a0fa70788e6dc8",
+  "smoke-fixtures/manifest.json": "7d379f7c4eea8c9011a27c0df78820b19656b75dc95e943a700a88a974a986a4"
+ },
+ "clones": {
+  "upstream": {
+   "commit": "7f1bd29cf473548212b8b731c52dcf2c7aa5a033",
+   "clean": true
+  },
+  "cuda-exl3": {
+   "commit": "754421fc99919317b9a4cf2928797bae8f870040",
+   "clean": true
+  },
+  "nccl-mesh-source": {
+   "commit": "19924dcc7c571d6e260953724d394ae50bad82cf",
+   "clean": true
+  }
+ }
+}

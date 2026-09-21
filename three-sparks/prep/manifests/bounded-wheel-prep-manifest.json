@@ -1,0 +1,15 @@
+{
+ "revision": 2,
+ "supersedes_compiler_path": "Dockerfile.serve-reconstructed",
+ "source_commit": "754421fc99919317b9a4cf2928797bae8f870040",
+ "status": "local preparation; not run",
+ "files": {
+  "build-wheel-bounded.sh": "e602d399b2062df104eaa631612b0b7ee9d918f4862f8a8d14ca563117747edd",
+  "wheel-build-entry.sh": "4ffda88e02b3f4792e0c09be52cb52086209ad178f153f1baf439fc3686d0fe3",
+  "verify-exl3-wheel.py": "554a4ee8e6bd600859b6d2d8546f35f8461daba07268958611bba487bb61ba7d",
+  "Dockerfile.serve-wheel": "a2a872195b39f0e5f541954d7e65d8032f804ebfc16dfe0c94ae5530f6701644",
+  "verify-installed-exl3.py": "f0f6bff993848e239b7e798972f5cb2865dc6555b9158d53ff8d3b63a151848b",
+  "build-mesh.sh": "d1bfb07c8413c476dfd35ac5b400453d9ec9dad5caf6ef5bb961d7386062401b",
+  "bounded-wheel-handoff.md": "2e0b9a105ed6bc7ab751b374a0af6378730dde48fedf1b8e95938b91ede8b850"
+ }
+}

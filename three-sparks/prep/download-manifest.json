@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "name": "target",
+      "repo": "turboderp/GLM-5.3-Flash-exl3",
+      "revision": "2a30229e67012798ba9f0cd832bb78abf4c363d5",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1696,
+          "git_blob_sha1": "a43791f306e6c26bf48714334ef2492c188e3fa8"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 1070,
+          "git_blob_sha1": "986b06fb2916b3518b82c7dcc0870723b91f2f92"
+        },
+        {
+          "path": "README.md",
+          "bytes": 7238,
+          "git_blob_sha1": "3f31ac0f9574599202e1d47414037ab3280a052a"
+        },
+        {
+          "path": "chat_template.jinja",
+          "bytes": 8617,
+          "git_blob_sha1": "15bf200ee8fb7ca3c5bdd362429aa801f4f033f6"
+        },
+        {
+          "path": "config.json",
+          "bytes": 86509,
+          "git_blob_sha1": "ecadf3252a6029a0563c6fbd30c9f097974290b6"
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 194,
+          "git_blob_sha1": "637ee6afa5c6ebfba4eb24bd5b9df68550143597"
+        },
+        {
+          "path": "model-00001-of-00019.safetensors",
+          "bytes": 8587818716,
+          "git_blob_sha1": "dabe42473c941e1c2270c926b8263e8a9b087f4b",
+          "sha256": "1c7a87b0fb108521d0cf3e495ca63c37732a06744131e8933ca12d2df0d8806e"
+        },
+        {
+          "path": "model-00002-of-00019.safetensors",
+          "bytes": 8587936824,
+          "git_blob_sha1": "d8ada3f1ba166cf852aefb9c21af5bda05e60bbb",
+          "sha256": "a67cd8e559ac013fc0d1dc58b66bd105e54bee0a31147b295089b2537646d4dc"
+        },
+        {
+          "path": "model-00003-of-00019.safetensors",
+          "bytes": 8590375904,
+          "git_blob_sha1": "071b475a90a49b83e2b0bc63661a1fb46597e71c",
+          "sha256": "d069cea25c6082a70b2dbc601725687f8d164a5dd047894acb58476b4175c1af"
+        },
+        {
+          "path": "model-00004-of-00019.safetensors",
+          "bytes": 8590340084,
+          "git_blob_sha1": "aa6e4e71d98aa5538f864fa56efa2781eccf1b7f",
+          "sha256": "d222d3137bec069a165219542d49d02defef2df69763464e93463a176e2ba935"
+        },
+        {
+          "path": "model-00005-of-00019.safetensors",
+          "bytes": 8590383216,
+          "git_blob_sha1": "82432fbedf547e42d5b59e2d22a4f5123fcc7eec",
+          "sha256": "6fdd4557f29e1b77248b6bbd6b35c691ef4b1dc63b7305c9f5cb0080e1c82836"
+        },
+        {
+          "path": "model-00006-of-00019.safetensors",
+          "bytes": 8587986708,
+          "git_blob_sha1": "ea180d1aab126fd2be22efa93aa042d73e9d68d6",
+          "sha256": "3e9c1f39a631dedd5cce7614947d1f3eab71c93dbb4c79bd2eec0ab413236055"
+        },
+        {
+          "path": "model-00007-of-00019.safetensors",
+          "bytes": 8590342372,
+          "git_blob_sha1": "7f0cf0aebc495194070896534ec78fac8b1082b7",
+          "sha256": "62eca4decce10159107948a320083d8e9dcf60f25e058877a1662b80f1412220"
+        },
+        {
+          "path": "model-00008-of-00019.safetensors",
+          "bytes": 8590383800,
+          "git_blob_sha1": "3ec2ce1251fca681deec88ddc41466ca395b1f68",
+          "sha256": "e8f8762fa1c6a698fc74d50760b82ec72d6043fb9ef6e05dac4032999f57d7c5"
+        },
+        {
+          "path": "model-00009-of-00019.safetensors",
+          "bytes": 8587944528,
+          "git_blob_sha1": "45b15ce71392a2f098f18ce757b0825cbbf72c1c",
+          "sha256": "f9d2e2df7fc7a65c33514a584e5a228d5eb4bec72fc516d9c649c94b06e3d00e"
+        },
+        {
+          "path": "model-00010-of-00019.safetensors",
+          "bytes": 8590383896,
+          "git_blob_sha1": "685adbb6ad74d45f7cd5005de02b729f5cd1a9b5",
+          "sha256": "5eb19bda8461e44323898172492f9f5c948f5c8ad00816b0e004feaf8b11ccfa"
+        },
+        {
+          "path": "model-00011-of-00019.safetensors",
+          "bytes": 8590342356,
+          "git_blob_sha1": "db161d64bc332f2b26f95499c906c2698ab2a3e1",
+          "sha256": "f2e687a3d410af6bd48f90d5770fac1054ad5c337d3cfa2bd56a5600387ba36a"
+        },
+        {
+          "path": "model-00012-of-00019.safetensors",
+          "bytes": 8590383392,
+          "git_blob_sha1": "6a99fa793d82c625beda04356dd8fdc346bb29b8",
+          "sha256": "caee2cdd11e781195a3bbb70b53da0c08c4add3485e200a4a28119d238201523"
+        },
+        {
+          "path": "model-00013-of-00019.safetensors",
+          "bytes": 8587986540,
+          "git_blob_sha1": "adffbe7c3f1b8ab0ac0539e45210d26cf2124a51",
+          "sha256": "094d5b9341505d25852993e0eef6d137ba75c4179bec2204bd067af264da5dd1"
+        },
+        {
+          "path": "model-00014-of-00019.safetensors",
+          "bytes": 8590342372,
+          "git_blob_sha1": "e7f3e7ba75fbb7889b520e54bb71878aa81cece6",
+          "sha256": "765f21794314da81bccdf6a1c9b3fff3f86711d34d83f7551667455a9775dc1a"
+        },
+        {
+          "path": "model-00015-of-00019.safetensors",
+          "bytes": 8590383888,
+          "git_blob_sha1": "b393e50d88a2f556c0c5e9a646bf612fe2601407",
+          "sha256": "f08d208c8ad27b3bb9c75c42c90e33a3e8acd722ccf5f4f74df1638084d46067"
+        },
+        {
+          "path": "model-00016-of-00019.safetensors",
+          "bytes": 8590341500,
+          "git_blob_sha1": "816ec96505905c6ef7319649edb529469bb66b64",
+          "sha256": "e4c0bbf93639fd96eddb9a38505c4de99d650f82d376c0e303a7c3fd38544c3d"
+        },
+        {
+          "path": "model-00017-of-00019.safetensors",
+          "bytes": 8587986956,
+          "git_blob_sha1": "6d715bf1bd541a794c44f259670fc88afaaf0452",
+          "sha256": "8e954f3e1660889a50974f46e66ad75a4e3bcadb0398a91646d58a09d9c2f54c"
+        },
+        {
+          "path": "model-00018-of-00019.safetensors",
+          "bytes": 8590342372,
+          "git_blob_sha1": "b75bdc2d83467017c1f2408659887767d45dc347",
+          "sha256": "bad6f1e51e7bd25a4da4fe55efe4f91512bf4e82085db2baa5cce1adea027c58"
+        },
+        {
+          "path": "model-00019-of-00019.safetensors",
+          "bytes": 6661824340,
+          "git_blob_sha1": "fbcc19cd7f1f85acf7dec0b5841f08261bdfa6ab",
+          "sha256": "de2031315b49f89e3d091e92bead8b239ea46e304236f34b5734a68b0b07d547"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "bytes": 15963650,
+          "git_blob_sha1": "f11a02c48f6282b85682d0ed80df419cb9ad9719",
+          "sha256": "ee1f2dbea800dea0b4225c38193f7ef41180ed42dd51f80a0cee58daf44cf606"
+        },
+        {
+          "path": "mtp.safetensors",
+          "bytes": 3793519833,
+          "git_blob_sha1": "dce32929e9851ee569e679ef6e32fc59e06511d2",
+          "sha256": "1bd09bd4eff4adc568e4ac3e92efb436c2d3aa5f0dceab4c72005d796066822d"
+        },
+        {
+          "path": "processor_config.json",
+          "bytes": 909,
+          "git_blob_sha1": "3ec2a058b2cdec556eca0f621e8c5164eec213c2"
+        },
+        {
+          "path": "quantization_config.json",
+          "bytes": 47905678,
+          "git_blob_sha1": "86e40daa0c32d4da8b90b3df8c7dfe5a07dad9b5",
+          "sha256": "d18c35bf6184a67a3b612b15c216bdfdf9e81505c0e02b646152925b13fafef3"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 20217442,
+          "git_blob_sha1": "aba40197a4cdb5607f4ab7a05fb0a4ee8054fd6d",
+          "sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 761,
+          "git_blob_sha1": "e375fa0a4e16660ce0e2026e39374d35dad4c079"
+        }
+      ],
+      "bytes": 165151543361
+    },
+    {
+      "name": "draft",
+      "repo": "incoai/GLM-5.3-Flash-DFlash2",
+      "revision": "dc77ff1c99eeb2df044ee3d4f0094eb033fee410",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 116,
+          "git_blob_sha1": "e404a01e1f3116ff0744366d088c8fc2ba4ab735"
+        },
+        {
+          "path": "README.md",
+          "bytes": 4666,
+          "git_blob_sha1": "7b22c057e4056b541d94611248de7dce8e4753a3"
+        },
+        {
+          "path": "config.json",
+          "bytes": 1273,
+          "git_blob_sha1": "083085aaf95d59bad59c58f1160865683460254e"
+        },
+        {
+          "path": "model.safetensors",
+          "bytes": 2342169800,
+          "git_blob_sha1": "eb41c39150c5f9ccc9ec0f48086491ce7c0002b2",
+          "sha256": "b33c03475ba7322cf398828f2d8d1be376df30dc05c6b40c28c8ea8da23e410b"
+        }
+      ],
+      "bytes": 2342175855
+    },
+    {
+      "name": "template",
+      "repo": "zai-org/GLM-5.3-Flash",
+      "revision": "690b705278a3a58e538fcb37c2ca8b5f9511213c",
+      "files": [
+        {
+          "path": "chat_template.jinja",
+          "bytes": 10950,
+          "git_blob_sha1": "06bd89e94b96652fd5d76d9f9e11cfa15e09f49d",
+          "sha256": "0c4099f3382d6c92700dfb99725025360966fd73032f0ecf32377c0d9e6309c5"
+        }
+      ],
+      "bytes": 10950
+    }
+  ],
+  "total_bytes": 167493730166
+}

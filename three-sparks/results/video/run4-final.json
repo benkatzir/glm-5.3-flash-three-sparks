@@ -1,0 +1,299 @@
+{
+ "url": "http://127.0.0.1:8888",
+ "finished_utc": "2026-09-21T06:52:27Z",
+ "results": [
+  {
+   "flaky": false,
+   "correct": "1/1",
+   "attempts": [
+    {
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a red rectangle moving from left to right.",
+     "usage": {
+      "prompt_tokens": 1713,
+      "total_tokens": 1800,
+      "completion_tokens": 87,
+      "prompt_tokens_details": null
+     },
+     "seconds": 4.8,
+     "finish": "stop"
+    }
+   ],
+   "mem_before": {
+    "head": 10.55,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 11.03,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "K4a_one_video_red_square_right",
+   "passed": true
+  },
+  {
+   "flaky": false,
+   "correct": "1/1",
+   "attempts": [
+    {
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a blue rectangle that moves downwards.",
+     "usage": {
+      "prompt_tokens": 1713,
+      "total_tokens": 1788,
+      "completion_tokens": 75,
+      "prompt_tokens_details": null
+     },
+     "seconds": 5.3,
+     "finish": "stop"
+    }
+   ],
+   "mem_before": {
+    "head": 11.03,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 11.03,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "K4a_one_video_blue_rect_down",
+   "passed": true
+  },
+  {
+   "http": 200,
+   "answer": "**Video 1:** A red rectangle moves to the right.\n**Video 2:** A blue rectangle moves downward.\n\n**Differences:** The objects differ in color (red vs. blue) and direction of motion (rightward vs. downward). Both are rectangles.",
+   "usage": {
+    "prompt_tokens": 3407,
+    "total_tokens": 3486,
+    "completion_tokens": 79,
+    "prompt_tokens_details": null
+   },
+   "seconds": 9.4,
+   "test": "K4b_two_videos",
+   "passed": true
+  },
+  {
+   "http": 200,
+   "answer": "**Images:**\n1. Red circle\n2. Blue square\n3. Green triangle\n4. Black text: \"ELEPHANT\"\n\n**Videos:**\n1. A red rectangle with a darker red vertical stripe moves from left to right.\n2. A blue rectangle with a darker blue horizontal stripe moves from top to bottom.",
+   "usage": {
+    "prompt_tokens": 4293,
+    "total_tokens": 4464,
+    "completion_tokens": 171,
+    "prompt_tokens_details": null
+   },
+   "seconds": 5.3,
+   "mem_before": {
+    "head": 10.91,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 11.08,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "K5_four_images_two_videos",
+   "passed": true
+  },
+  {
+   "http": 400,
+   "message": "{\"error\": {\"message\": \"At most 2 video(s) may be provided in one prompt. (parameter=video)\", \"type\": \"BadRequestError\", \"param\": \"video\", \"code\": 400}}",
+   "engine_alive_after": true,
+   "test": "K6_third_video_refused",
+   "passed": true
+  },
+  {
+   "http": 400,
+   "message": "{\"error\": {\"message\": \"Failed to apply Glm5NextProcessor on data={'text': '<|begin_of_video|><|video|><|end_of_video|>', 'videos': [array([[[[197, 200, 197],\\n         [197, 200, 197],\\n         [197, 200, 197],\\n         ...,\\n         [197, 200, 197],\\n         [197, 200, 197],\\n         [197, 200",
+   "engine_alive_after": true,
+   "test": "SHORT_clip_below_sampler_floor",
+   "passed": true
+  },
+  {
+   "flaky": false,
+   "correct": "3/3",
+   "attempts": [
+    {
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a green circle that moves upwards.",
+     "usage": {
+      "prompt_tokens": 8017,
+      "total_tokens": 8236,
+      "completion_tokens": 219,
+      "prompt_tokens_details": null
+     },
+     "seconds": 8.5,
+     "finish": "stop"
+    },
+    {
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a green circle moving upwards.",
+     "usage": {
+      "prompt_tokens": 8017,
+      "total_tokens": 8178,
+      "completion_tokens": 161,
+      "prompt_tokens_details": null
+     },
+     "seconds": 8.4,
+     "finish": "stop"
+    },
+    {
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a green circle moving upwards.",
+     "usage": {
+      "prompt_tokens": 8017,
+      "total_tokens": 8178,
+      "completion_tokens": 161,
+      "prompt_tokens_details": null
+     },
+     "seconds": 11.6,
+     "finish": "stop"
+    }
+   ],
+   "mem_before": {
+    "head": 11.14,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 10.35,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "V720p_green_circle_up_8s_borderline",
+   "passed": true
+  },
+  {
+   "flaky": false,
+   "correct": "1/1",
+   "attempts": [
+    {
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a yellow triangle that moves from right to left.",
+     "usage": {
+      "prompt_tokens": 8017,
+      "total_tokens": 8181,
+      "completion_tokens": 164,
+      "prompt_tokens_details": null
+     },
+     "seconds": 9.3,
+     "finish": "stop"
+    }
+   ],
+   "mem_before": {
+    "head": 10.42,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 10.28,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "V1080p_yellow_triangle_left_8s_brake",
+   "passed": true
+  },
+  {
+   "wall_seconds": 18.2,
+   "streams": [
+    {
+     "clip": "red-square-right",
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a red rectangle moving from left to right.",
+     "usage": {
+      "prompt_tokens": 1713,
+      "total_tokens": 1794,
+      "completion_tokens": 81,
+      "prompt_tokens_details": null
+     },
+     "seconds": 15.7
+    },
+    {
+     "clip": "blue-rect-down",
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a blue rectangle moving downwards.",
+     "usage": {
+      "prompt_tokens": 1713,
+      "total_tokens": 1787,
+      "completion_tokens": 74,
+      "prompt_tokens_details": null
+     },
+     "seconds": 15.3
+    },
+    {
+     "clip": "green-circle-up",
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a green circle moving upward.",
+     "usage": {
+      "prompt_tokens": 8017,
+      "total_tokens": 8033,
+      "completion_tokens": 16,
+      "prompt_tokens_details": null
+     },
+     "seconds": 13.6
+    },
+    {
+     "clip": "yellow-triangle-left",
+     "http": 200,
+     "ok": true,
+     "answer": "The object is a yellow triangle that moves from right to left.",
+     "usage": {
+      "prompt_tokens": 8017,
+      "total_tokens": 8211,
+      "completion_tokens": 194,
+      "prompt_tokens_details": null
+     },
+     "seconds": 18.1
+    }
+   ],
+   "mem_before": {
+    "head": 10.36,
+    "worker1": null,
+    "worker2": null
+   },
+   "mem_after": {
+    "head": 10.18,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "CONC4_four_videos_at_once",
+   "passed": true
+  },
+  {
+   "http": 200,
+   "answer": "The image contains two objects:\n\n1. **Red square** \u2014 located on the left side of the image.\n2. **Blue circle** \u2014 located on the right side of the image.",
+   "usage": {
+    "prompt_tokens": 223,
+    "total_tokens": 263,
+    "completion_tokens": 40,
+    "prompt_tokens_details": null
+   },
+   "test": "IMAGE_after_videos",
+   "passed": true
+  },
+  {
+   "mem": {
+    "head": 10.32,
+    "worker1": null,
+    "worker2": null
+   },
+   "test": "ENGINE_alive_final",
+   "passed": true
+  }
+ ],
+ "passed": 11,
+ "flaky_model_perception": 0,
+ "hard_failures": 0
+}

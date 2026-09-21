@@ -1,0 +1,357 @@
+{
+ "schema": "glm53.runtime-evidence.v1",
+ "collected_utc": "2026-09-21T07:06:52.245503+00:00",
+ "collector_sha256": "a9216a7e6080288635bd6b3d8d73325e439778049fd6e2f60a8fea355dc036ad",
+ "scope": "Head-local launch/config/source evidence. No model API calls, GPU tests, process mutation, or claim of successful C8 long-context inference.",
+ "container": {
+  "image_id": "sha256:af1cd7490e0bd7f47c3ede8752e87625f3e080a4f5224d9191ca455aa56cdfbb",
+  "started_at": "2026-09-21T07:02:18.398254669Z",
+  "selected_environment": {
+   "CUDA_EXL3_DEBUG_NAMES": "1",
+   "CUDA_EXL3_MLA_TUNE_VERBOSE": "1",
+   "ENABLE_EP": "1",
+   "HAREM_DISABLE_PERSISTENT_TOPK": "1",
+   "HAREM_DRAFT_KV_DTYPE": "fp8",
+   "HAREM_EXL3_FULLSCOPE": "1",
+   "HAREM_GLM47_FAILCLOSED": "1",
+   "HAREM_INDEXER_WS_MODE": "bound",
+   "HAREM_KDA_FLASHKDA": "1",
+   "HAREM_KPOOL_TAIL_FIX": "1",
+   "HAREM_PREFIX_HIT": "1",
+   "HAREM_SM12_ITEMS": "pdl,kpool",
+   "HAREM_SW_BLOCK_SIZE": "256",
+   "HAREM_VISION": "1",
+   "HAREM_XGRAMMAR_BACKPORT": "1",
+   "NCCL_ALGO": "Ring",
+   "NCCL_IB_DISABLE": "1",
+   "NCCL_NET": "Mesh",
+   "NCCL_NET_PLUGIN": "mesh",
+   "NODE_RANK": "0",
+   "TP_SIZE": "3"
+  }
+ },
+ "observed_startup": {
+  "settings": {
+   "block_size": [
+    256
+   ],
+   "enable_expert_parallel": [
+    true
+   ],
+   "gpu_memory_utilization": [
+    0.8
+   ],
+   "kv_cache_dtype": [
+    "fp8",
+    "auto"
+   ],
+   "max_model_len": [
+    1000000
+   ],
+   "max_num_batched_tokens": [
+    2048
+   ],
+   "max_num_seqs": [
+    8
+   ],
+   "max_seq_len": [
+    1000000
+   ],
+   "pipeline_parallel_size": [
+    1
+   ],
+   "tensor_parallel_size": [
+    3
+   ],
+   "max_num_scheduled_tokens": [
+    2048
+   ]
+  },
+  "reported_gpu_kv_cache_tokens": [
+   5658402
+  ],
+  "available_kv_cache_memory_gib": [
+   40.78
+  ],
+  "reported_max_concurrency": [
+   {
+    "request_tokens": 1000000,
+    "reported_concurrency": 5.66
+   }
+  ],
+  "observed_num_gpu_blocks": [
+   2054
+  ],
+  "observed_pool_breakdowns": [
+   {
+    "num_blocks": 2054,
+    "blocks_per_request": 363,
+    "max_model_len": 1000000
+   }
+  ],
+  "observed_cache_groups": [
+   {
+    "spec": "MLAAttentionSpec",
+    "layers": 22,
+    "page_bytes": 109824,
+    "bytes_per_block": 2416128,
+    "max_bytes_per_request": 33057024,
+    "blocks_per_request": 301
+   },
+   {
+    "spec": "KpoolTailSpec",
+    "layers": 11,
+    "page_bytes": 109824,
+    "bytes_per_block": 1208064,
+    "max_bytes_per_request": 109824,
+    "blocks_per_request": 1
+   },
+   {
+    "spec": "MambaSpec",
+    "layers": 9,
+    "page_bytes": 1703936,
+    "bytes_per_block": 15335424,
+    "max_bytes_per_request": 15335424,
+    "blocks_per_request": 9
+   },
+   {
+    "spec": "MambaSpec",
+    "layers": 9,
+    "page_bytes": 1703936,
+    "bytes_per_block": 15335424,
+    "max_bytes_per_request": 15335424,
+    "blocks_per_request": 9
+   },
+   {
+    "spec": "MambaSpec",
+    "layers": 8,
+    "page_bytes": 1703936,
+    "bytes_per_block": 13631488,
+    "max_bytes_per_request": 15335424,
+    "blocks_per_request": 9
+   },
+   {
+    "spec": "MambaSpec",
+    "layers": 8,
+    "page_bytes": 1703936,
+    "bytes_per_block": 13631488,
+    "max_bytes_per_request": 15335424,
+    "blocks_per_request": 9
+   },
+   {
+    "spec": "SlidingWindowSpec",
+    "layers": 5,
+    "page_bytes": 196608,
+    "bytes_per_block": 983040,
+    "max_bytes_per_request": 4915200,
+    "blocks_per_request": 25
+   }
+  ],
+  "effective_attention_block_tokens": [
+   3328
+  ],
+  "effective_draft_kv_dtype_override": [
+   "fp8"
+  ],
+  "effective_mamba_cache_mode": [
+   "align"
+  ],
+  "application_startup_complete_seen": true,
+  "prelude_starting_vllm_seen": true
+ },
+ "startup_evidence": {
+  "origin": "docker_logs_current_container",
+  "sha256": "da3da85b2a771365ef7630340884420a7bc6ab268ba9c4e49b2b8906888522d3",
+  "bytes": 741129,
+  "path": null
+ },
+ "installed_sources_and_defaults": {
+  "files": {
+   "config/cache.py": {
+    "sha256": "8790351601be188ed1cc7ad9de2af1978b238269da4724873af1185c91165ef6",
+    "bytes": 13934
+   },
+   "config/offload.py": {
+    "sha256": "6f2db3d9a2730588473d5155811690c6241b167a21dcb62fbbd9ebb6386de42c",
+    "bytes": 6522
+   },
+   "config/scheduler.py": {
+    "sha256": "3cf5d41a5d662ab0eada6f3128e2538abc0a250d6aef82acab7df7dd84e498bc",
+    "bytes": 12302
+   },
+   "config/vllm.py": {
+    "sha256": "4fd772e7dedb3c6cbc853c50509164c8ce16695df383293908519c4e3c3ca8f4",
+    "bytes": 118213
+   },
+   "config/speculative.py": {
+    "sha256": "a22757c148f2297b50ce41a821f9fd4a4ef2b9755881faa0aae653dd565db275",
+    "bytes": 71474
+   },
+   "v1/core/sched/scheduler.py": {
+    "sha256": "4c38a32c7405eb95eb9dd3b3d04cbfe5d0cb4ebc0b18efbaa4adc68c7a9bca5a",
+    "bytes": 139214
+   },
+   "v1/core/encoder_cache_manager.py": {
+    "sha256": "3beb7ba2356d7e28fa8c827f7eccdafc8599ee6bee883b3c565877fe02fb0048",
+    "bytes": 15975
+   },
+   "v1/kv_cache_interface.py": {
+    "sha256": "54a761dd60907945c8f3bfc450b1264033013b83b204320581961f887b03e5b0",
+    "bytes": 45501
+   }
+  },
+  "defaults": {
+   "kv_offloading_size": {
+    "value": null,
+    "source": "config/cache.py",
+    "line": 189
+   },
+   "kv_offloading_backend": {
+    "value": "native",
+    "source": "config/cache.py",
+    "line": 195
+   },
+   "cpu_offload_gb": {
+    "value": 0,
+    "source": "config/offload.py",
+    "line": 23
+   },
+   "offload_group_size": {
+    "value": 0,
+    "source": "config/offload.py",
+    "line": 54
+   },
+   "offload_backend": {
+    "value": "auto",
+    "source": "config/offload.py",
+    "line": 83
+   },
+   "long_prefill_token_threshold": {
+    "value": 0,
+    "source": "config/scheduler.py",
+    "line": 70
+   },
+   "disable_chunked_mm_input": {
+    "value": false,
+    "source": "config/scheduler.py",
+    "line": 107
+   }
+  },
+  "vllm_version": "0.1.dev20051+g487ecf187"
+ },
+ "host_file_identities": {
+  "prep/source-pins.json": {
+   "sha256": "acaccc787dbacfb0adba921324693c696ffaaf9191d353f6d7fe4bde4803f34e",
+   "bytes": 853
+  },
+  "prep/download-manifest.json": {
+   "sha256": "9d86dd90d73ebf4f5817a6e65afe7ead5dd01f0e93aa584016cd4ec35c60d330",
+   "bytes": 8844
+  },
+  "prep/start-private-tp3.sh": {
+   "sha256": "d741ad15cd11e9aa815560f16e063208b7aa1de21a40f1916d2a7bbc1ff7e2fe",
+   "bytes": 16087
+  },
+  "prep/private-entry.sh": {
+   "sha256": "65e8ce34ab870e6466ae368059a3ba9ab830083799c45cb45381edc6029cd58b",
+   "bytes": 328
+  },
+  "prep/glm_private_auth.py": {
+   "sha256": "8100f3466dd7abf7a43d5ce2e506e76a347d61b798dec9d4090f152c23aa196f",
+   "bytes": 1797
+  },
+  "runtime/tp3-prelude.sh": {
+   "sha256": "3ceb8eb5db957b7520d2bfd2a3735d61541a5cadd1f07f6dc43ff7809676396a",
+   "bytes": 22513
+  },
+  "overlay-v1/sparse_attn_indexer.py": {
+   "sha256": "287bd50565de69641717064f0476c6db2169365562053a658911fc8bd45d1006",
+   "bytes": 32831
+  },
+  "overlay-v1/sparse_attn_indexer_kpool.py": {
+   "sha256": "cf4393956d523dad3512c4427a837b78ed93fa5f8ffd5388491ecc1cefdaa215",
+   "bytes": 47996
+  },
+  "nccl-mesh/libnccl-net-mesh.so": {
+   "sha256": "8bed82468c9e1f72bbdabd9016922b73c7fd8ea512127d7daadd3dc66209bcb2",
+   "bytes": 418872
+  },
+  "models/target-tp3/config.json": {
+   "sha256": "94de4c3da498bce2b1220623d7e75afe3d49aebe161bbcafca433b0b58204c2c",
+   "bytes": 72754
+  },
+  "models/draft-tp3/config.json": {
+   "sha256": "c9f0c3a6c41f8a226fb31a1fb7817cea274d1f4b7b0d2e4d787d38c0f508283f",
+   "bytes": 1273
+  }
+ },
+ "declared_source_pins": {
+  "recipe": "7f1bd29cf473548212b8b731c52dcf2c7aa5a033",
+  "cuda_exl3": "754421fc99919317b9a4cf2928797bae8f870040",
+  "base_image": "vllm/vllm-openai@sha256:905c02933be6021301db2dc284e24e3727467aa3a0f63b41d609885778a07bce",
+  "target": {
+   "repo": "turboderp/GLM-5.3-Flash-exl3",
+   "revision": "2a30229e67012798ba9f0cd832bb78abf4c363d5"
+  },
+  "draft": {
+   "repo": "incoai/GLM-5.3-Flash-DFlash2",
+   "revision": "dc77ff1c99eeb2df044ee3d4f0094eb033fee410"
+  },
+  "template": {
+   "repo": "zai-org/GLM-5.3-Flash",
+   "revision": "690b705278a3a58e538fcb37c2ca8b5f9511213c",
+   "file": "chat_template.jinja",
+   "sha256": "0c4099f3382d6c92700dfb99725025360966fd73032f0ecf32377c0d9e6309c5"
+  },
+  "mesh_plugin_revision": "19924dcc7c571d6e260953724d394ae50bad82cf"
+ },
+ "no_offload_evidence": {
+  "resolved_values": {
+   "cpu_offload_gb": 0,
+   "offload_group_size": 0,
+   "kv_offloading_size": null,
+   "offload_backend": "auto"
+  },
+  "basis": "Current PID1 args plus installed source defaults and any observed config fields; integrated Spark system memory is not claimed to be discrete VRAM.",
+  "unreviewed_offload_environment_names": [],
+  "opaque_configuration_flags": []
+ },
+ "capacity": {
+  "reported_pool_guard_tokens": 5400000,
+  "actual_cache_block_count": [
+   2054
+  ],
+  "allocation_proof": false,
+  "note": "Reported pool and concurrency come from startup. Do not substitute the v1 pool or infer actual blocks here. Hybrid groups make tokens/3328 an invalid block-count derivation. Actual 8\u00d7500k residency is evaluated by the long client with telemetry."
+ },
+ "checks": {
+  "container_running": true,
+  "expected_image": true,
+  "pid1_is_vllm_serve": true,
+  "head_rank0": true,
+  "tp3_pp1_three_nodes": true,
+  "expert_parallel": true,
+  "max_sequences8": true,
+  "model_context1000000": true,
+  "batch2304": false,
+  "threshold256": false,
+  "scheduled2304_observed": false,
+  "chunked_prefill_enabled": true,
+  "chunked_mm_input_enabled": true,
+  "native_image_input_enabled": true,
+  "dflash7": true,
+  "exl3_fp8_eager": true,
+  "fullscope_index8192_draft_fp8": true,
+  "observed_attention3328_mamba_align_draft_fp8": true,
+  "no_configured_weight_or_kv_offload": true,
+  "observed_pool_above_conservative_guard": true,
+  "startup_complete_seen": true,
+  "vllm_pinned_version": true,
+  "installed_scheduler_and_offload_source_hashes_present": true,
+  "declared_source_pins_present": true,
+  "no_conflicting_observed_config": false,
+  "same_running_container_at_end": true
+ },
+ "ready_for_reviewed_long_test": false,
+ "general_or_native_relative_accuracy_claimed": false
+}

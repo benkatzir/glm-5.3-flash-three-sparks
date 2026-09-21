@@ -1,0 +1,8 @@
+overlay: sparse_attn_indexer_kpool.py
+overlay: sparse_attn_indexer.py
+IMAGE=sha256:af1cd7490e0bd7f47c3ede8752e87625f3e080a4f5224d9191ca455aa56cdfbb rank=0 nnodes=3 tp=3 ep=1 spec=dflash/7 kv=fp8 mem=0.88 transport=mesh
+Image and both read-only indexer overlay hashes verified
+mem settle: MemAvailable=118 GiB (target 112) after 0s
+ac604dfd333fffe7a948b21fb709c0a8268e5dccbd55d9a86dfc8fcb1eff68ae
+launched glm53-v2-r0 rank=0 host=HEAD_MGMT_IP
+glm53-v2-r0 Up 2 seconds
