@@ -1,8 +1,9 @@
 {
  "schema": "three-sparks-source-lock.v1",
  "files": {
-  "README.md": "14ce4399ec901fbcf3aa09c8cad46b5806b63995fd40c0fc69714f246c7b021b",
+  "README.md": "9c3c59617fe677446ebb9e1fac1c3fa42719859ba3e093f27d2af2e9e058e4a3",
   "docs/BENCHMARKS.md": "d9d0db4fcd9d80632f002d16a029da7206e71be2f6b4f7bba90d991e8873d0b6",
+  "docs/COMPARISON.md": "5c7e3ac0f5071e111a243e4b5ad03f4ee0d5fa1ab4c50c169f53b3950d430cd8",
   "docs/DEVIATIONS.md": "8e5dd22d38f9708c3a8553a587094d1b54f17400ebd969e5b32b3fdd6965c637",
   "docs/LIMITATIONS.md": "28a3d4bf0ec8678337603285c4e1c5a92254f10ebc415eebf6fa69859d81321d",
   "docs/OPERATIONS.md": "156f60a391503219c57afa81e24fbb6d71de7001a75f8285ac4745b1c80a659d",

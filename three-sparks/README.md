@@ -6,7 +6,7 @@
 | [`prep/`](prep/) | Every script as deployed on the nodes, in the same flat layout (`$GLM_ROOT/prep/`), because the scripts find their data files next to themselves. `prep/upstream` is a symlink to the repository root, which is where the nodes had the upstream checkout |
 | [`env/`](env/) | The head node's serving env file with addresses replaced |
 | [`results/`](results/) | Sanitized copies of the evidence the tests wrote ([index](results/README.md)) |
-| [`docs/`](docs/) | Benchmarks, limitations, deviations from upstream, provenance, operations, video, timeline; `private-notes/` holds the preparation and review notes as written before deployment |
+| [`docs/`](docs/) | Side-by-side comparison with upstream, benchmarks, limitations, deviations, provenance, operations, video, timeline; `private-notes/` holds the preparation and review notes as written before deployment |
 | [`licenses/`](licenses/) | Licences of the third-party components the build pulls in |
 | `source-lock.json`, [`scripts/verify_sources.py`](scripts/verify_sources.py) | SHA-256 of every file in this directory and a checker |
 

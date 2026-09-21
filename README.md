@@ -51,7 +51,8 @@ evidence: [three-sparks/results/](three-sparks/results/README.md).
 | Multimodal | 4 images and 2 videos per prompt, 8,000-token per-item brake, boot-time video geometry gate armed with fixtures |
 | API | OpenAI-compatible on the head, bearer-token middleware on every route except `/health` |
 
-Every difference from upstream, with the reason and the evidence:
+Upstream and this fork side by side, configuration, results and tooling:
+[COMPARISON.md](three-sparks/docs/COMPARISON.md). Every difference, with the reason and the evidence:
 [DEVIATIONS.md](three-sparks/docs/DEVIATIONS.md).
 
 ## Reproducing it
