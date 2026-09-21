@@ -2,8 +2,8 @@
 
 The serving stack is upstream's recipe at `7f1bd29` with the same checkpoint, draft, base image,
 kernel revision, patch tree, TP3 + expert-parallel layout, FP8 KV, block size, index top-k, vision
-settings and HAREM flags. Our short-prompt eight-stream rate reproduces upstream's published figure
-(28.1 to 28.7 tok/s per stream here against about 28.4 there). The table below is the complete list
+settings and HAREM flags. Our short-prompt eight-stream aggregate reaches 97 to 98 percent of upstream's
+published 196.1 tok/s ([BENCHMARKS.md](BENCHMARKS.md) section 1). The table below is the complete list
 of deviations, grouped by whether they change what the engine does.
 
 ## Changes that affect scheduling or memory
@@ -12,8 +12,8 @@ of deviations, grouped by whether they change what the engine does.
 |---|---|---|---|---|
 | `--max-num-batched-tokens` | 2048 | **2304** (profiles v2 to v4) | Together with the threshold below, lets eight long prompts prefill in the same steps instead of one after another | [BENCHMARKS.md](BENCHMARKS.md) section 4, the scheduler A/B |
 | `--long-prefill-token-threshold` | not set | **256** | Same | Same |
-| `gpu-memory-utilization` | 0.88 in the example file; 0.80 in upstream's measured results | **0.80** | 0.88 left the head node under 2 GiB of free host memory during eight-way 500k prefill and the run was cancelled; upstream's own results doc runs at 0.80 with 12 to 13 GB free | [fair-v2 cancellation note](../results/long-context-500k-c8/fair-v2-cancellation-note.json), [SOURCE_MEMORY_REVIEW.md](private-notes/SOURCE_MEMORY_REVIEW.md) |
-| `ENFORCE_EAGER` | 0 in the example file | **1** | Upstream's results doc states CUDA graphs are off in every measured configuration because vLLM sets `cudagraph_mode=NONE` for the FP8 draft cache on FlashInfer; the flag makes explicit what already happens. Measured cost upstream: 1.5 to 2 percent single-stream, inside noise | upstream docs/10 section 5.8 |
+| `gpu-memory-utilization` | **0.88** in the example file and in current production 12 and 13; 0.80 in productions 7 to 9 and the per-arm sweep table | **0.80** | 0.88 left the head node at 1.8 GiB of free host memory four minutes into eight-way 500k prefill and the run was cancelled. Upstream's own ladder measures 1.86 GiB at 0.88 under a lighter load and calls it the last rung before the cliff. Cost: 1.4M tokens of pool | [BENCHMARKS.md](BENCHMARKS.md) section 4.3, [upstream's ladder](../../results/memory/ladder-6sep.md), [cancellation note](../results/long-context-500k-c8/fair-v2-cancellation-note.json) |
+| `ENFORCE_EAGER` | 0 in the example file | **1** | Upstream's results doc states CUDA graphs are off in every measured configuration because vLLM sets `cudagraph_mode=NONE` for the FP8 draft cache on FlashInfer; the flag makes explicit what already happens. Measured cost upstream: 1.5 to 2 percent single-stream, inside noise | [upstream docs/10](../../docs/10-results-and-roofline.md), section 5.8 |
 | `--limit-mm-per-prompt` video | 2 | 0 (v1 to v3), **2 from v4** | Upstream's repo omits the fixture clips its boot-time geometry gate reads, so the gate could only be skipped. We generated fixtures, ran the gate, then enabled video | [VIDEO.md](VIDEO.md) |
 
 ## Changes forced by what upstream did not publish, or by this hardware

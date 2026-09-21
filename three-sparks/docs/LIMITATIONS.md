@@ -46,6 +46,11 @@ for simultaneous decode at a usable rate. For queue-style batch work upstream's 
 
 ## Reproduction gaps
 
+- There is no completed 500k run at fully original settings (upstream's scheduler together with its
+  0.88 memory fraction). The 0.88 attempt was cancelled at four minutes, and the scheduler control
+  ran at 0.80. What the unmodified recipe does at eight-way 500k on these machines is therefore a
+  projection ([BENCHMARKS.md](BENCHMARKS.md) section 4.3), not a measurement.
+
 - The serving image was **reconstructed**: upstream's Dockerfile was not published. The image here
   builds and passes every gate, but it is not upstream's image and no sidecar or byte comparison
   against upstream's exists.

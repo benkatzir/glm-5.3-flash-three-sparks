@@ -45,6 +45,10 @@ All profiles share the image, weights, patch tree (`runtime/`, manifest in
 The per-boot reviewed evidence, produced by
 [`prep/collect-runtime-evidence.py`](../prep/collect-runtime-evidence.py) from the
 running head container, is under [`results/runtime-evidence/`](../results/runtime-evidence/).
+There is no such file for the v1 baseline: the collector was written after v1 had been replaced, and it
+refuses a stopped container. v1's configuration is carried by its boot key lines instead
+([`results/boot/startup-v1-keylines.log`](../results/boot/startup-v1-keylines.log)): the full
+non-default launch arguments, the memory accounting line and the reported pool.
 
 ## Test inputs
 

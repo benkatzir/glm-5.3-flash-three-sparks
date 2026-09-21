@@ -24,7 +24,7 @@ Same three machines, same image and weights throughout; temperature 0, reasoning
 | Workload | Streams | Per-stream decode | Result |
 |---|---:|---:|---|
 | Short coding prompts (upstream's sweep protocol) | 1 | **73.5 tok/s** | 88/88 requests per round passed |
-| Short coding prompts | 8 | **28.7 tok/s**, 190.7 aggregate | matches upstream's published ~28.4; TTFT 0.84 s median |
+| Short coding prompts | 8 | **28.7 tok/s**, 190.7 aggregate | 97 % of upstream's published [196.1 aggregate](UPSTREAM-README.md#three-nodes--production-configuration-12); TTFT 0.84 s median |
 | 8.9k-token prompts, one image each | 8 | own-window 31 to 32 tok/s | 16/16 lookups, 32/32 image fields, 62 s wall |
 | **501k-token prompts, one image each (serving profile, fair-v4)** | 8 | **13.08 to 13.60 tok/s**, 107.3 aggregate, in a 235.8 s common window | all eight completed; 84/96 lookups with source record, 32/32 image fields; 0 preemptions; first tokens at 47 min, 52 min wall |
 | Same wave on fair-v3 (first completed run, video off) | 8 | 12.85 to 13.64 tok/s, 236.5 s window | 82/96 lookups, 32/32 image fields, 0 preemptions, 52 min wall |
@@ -47,7 +47,7 @@ evidence: [three-sparks/results/](three-sparks/results/README.md).
 | Transport | nccl-mesh-plugin `19924dcc` plus upstream's three patches, all four RoCE devices per node |
 | KV and context | FP8 KV, block size 256, `index_topk` 8192, 1,000,000 tokens per request, 8 sequences; reported pool 5.56 to 5.66M tokens |
 | Scheduling | **`--max-num-batched-tokens 2304`, `--long-prefill-token-threshold 256`** (upstream: 2048, none) |
-| Memory | **`gpu-memory-utilization 0.80`** (upstream's example file says 0.88; its measured results use 0.80), eager mode |
+| Memory | **`gpu-memory-utilization 0.80`** (upstream's current production uses 0.88, which left under 2 GiB of free host memory here during eight-way 500k prefill; [why](three-sparks/docs/BENCHMARKS.md#43-why-the-first-attempt-at-upstreams-088-memory-fraction-was-cancelled)), eager mode |
 | Multimodal | 4 images and 2 videos per prompt, 8,000-token per-item brake, boot-time video geometry gate armed with fixtures |
 | API | OpenAI-compatible on the head, bearer-token middleware on every route except `/health` |
 

@@ -55,5 +55,7 @@ RESULT: PASS (8 note(s)) -- arithmetic is sound for tp=3
 (Worker_TP0_EP0 pid=378) INFO 09-21 01:35:56 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
 (Worker_TP0_EP0 pid=378) INFO 09-21 01:35:57 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=0
 (Worker_TP0_EP0 pid=378) INFO 09-21 01:35:57 [multimodal.py:729] HAREM-VISION: tower loaded, data_parallel=True, vit_attn_backend=FLASH_ATTN, EXL3 linears=99, unquantized linears=0, dead fused qkv tensors dropped=1
+(Worker_TP0_EP0 pid=378) INFO 09-21 01:36:22 [gpu_worker.py:564] Available KV cache memory: 50.27 GiB
 (EngineCore pid=341) INFO 09-21 01:36:22 [kv_cache_utils.py:2341] GPU KV cache size: 7,101,928 tokens, Maximum concurrency for 1,000,000 tokens per request: 7.10x
+(Worker_TP0_EP0 pid=378) INFO 09-21 01:36:29 [gpu_worker.py:790] Free memory on device (112.79/121.69 GiB) on startup. Desired GPU memory utilization is (0.88, 107.09 GiB). Actual usage is 55.13 GiB for consumed memory (weights + non-torch), 1.69 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=53817820529` (50.12 GiB) to fit into requested memory, or `--kv-cache-memory=59948603392` (55.83 GiB) to fully utilize gpu memory. Current kv cache memory in use is 50.27 GiB.
 (APIServer pid=1) INFO:     Application startup complete.
